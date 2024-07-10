@@ -17,7 +17,7 @@ export default function Header(){
     };
     return (
         <>
-        <nav className="navbar bg-white rounded-b-2xl shadow-md flex w-full max-sm:justify-between sm:max-xl:justify-between max-xl:flex-col sm:max-xl:px-[3%] max-sm:flex-col max-sm:px-[3%]">
+        <nav className="navbar bg-white rounded-b-2xl fixed top-[0.01%] shadow-md flex w-full max-sm:justify-between sm:max-xl:justify-between max-xl:flex-col sm:max-xl:px-[3%] max-sm:flex-col max-sm:px-[3%]">
             <Link to='' className="Logo py-[1.5%] w-[23%] flex justify-end">
                 <LogoJumpit/>
             </Link>
