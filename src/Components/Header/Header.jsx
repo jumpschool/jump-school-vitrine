@@ -17,12 +17,12 @@ export default function Header(){
     };
     return (
         <>
-        <nav className="navbar bg-white rounded-b-2xl shadow-md flex w-full">
+        <nav className="navbar bg-white rounded-b-2xl shadow-md flex w-full max-sm:justify-between max-sm:px-[3%]">
             <div className="Logo py-[1.5%] w-[23%] flex justify-end">
                 <LogoJumpit/>
             </div>
-            <div className="block lg:hidden">
-                    <button onClick={toggleMenu} className="flex items-center px-3 py-2 border rounded text-teal-200 border-rose-600 hover:text-rose-600 hover:border-rose-400">
+            <div className="block lg:hidden py-[4%]">
+                    <button onClick={toggleMenu} className="flex items-center px-3 py-2 border rounded border-rose-600 hover:text-rose-600 hover:border-rose-400">
                         <svg className="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                             <title>Menu</title>
                             <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
@@ -73,13 +73,6 @@ export default function Header(){
                         </button>
                     </div>
                     </div>
-
-
-
-
-
-                        
-                       
 
                         <button className="hover:bg-white hover:border-2 hover:border-rose-600 hover:text-rose-600  hover:rounded-md Text-navbar-element bg-rose-600 text-lg px-[7%] text-white font-bold rounded-lg">
                             Candidater
