@@ -1,4 +1,5 @@
 import HeroSection from "../Components/Hero/HeroSection";
+import Question from "../Components/Home/Questions/Question";
 import Rapport from "../Components/Home/RapportInsersion/Rapport";
 
 export default function Home(){
@@ -6,6 +7,7 @@ export default function Home(){
         <>
         <HeroSection />
         <Rapport/>
+        <Question/>
         </>
     )
 }
