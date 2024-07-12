@@ -6,7 +6,7 @@ export default function HeroSection()
 {
     return(
         <>
-            <div className="Hero_container ">
+            <div className="Hero_container overflow-hidden">
                 <div className="flex_content">
                     <div className="content_left">
                         <div className="header_text">
