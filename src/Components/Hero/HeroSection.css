@@ -312,6 +312,14 @@
 }
 
 
+@media (max-width:2000px)
+{
+    .Hero_container .flex_content .content_left {
+       
+        margin-top: 14rem;
+    }
+}
+
 
 @media (max-width:1392px)
 {
@@ -490,13 +498,20 @@
     .bottom_container .bottom_container_flex 
     div:nth-child(2)::after
    {
-       
        top: 5rem;
    }
 
    .bottom_container .bottom_container_flex
    {
-    margin-top: -6rem;
+     margin-top: -6rem;
    }
    
+}
+
+
+@media (max-width:317px)
+{
+    .Hero_container .flex_content .content_left {
+        margin-top: 10rem;
+    }
 }
