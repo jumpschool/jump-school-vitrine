@@ -1,3 +1,11 @@
+.HolderContainer
+{
+    background: rgb(222,36,92);
+    background: linear-gradient(67deg, rgba(222,36,92,0.217546393557423) 0%, rgba(255,255,255,0.29597776610644255) 40%);
+    padding-top: 3rem;
+    position: relative;
+}
+
 .leftHeaderText
 {
     font-size: 3rem;
@@ -59,3 +67,183 @@
 
 
 
+@media (max-width:2000px)
+{
+    .description {
+        width: 75%;
+    }
+
+
+    .bottomCardsSecond,
+    .bottomCardsfirst {
+        background: rgb(255, 255, 255);
+        width: 60%;
+        padding:0.5rem 2rem 0.5rem 1rem;
+        border-radius: 5px;
+        color: rgb(0, 0, 0);
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 6px 6px 5px 2px rgba(163,163,163,0.31);
+        -webkit-box-shadow: 6px 6px 5px 2px rgba(163,163,163,0.31);
+        -moz-box-shadow: 6px 6px 5px 2px rgba(163,163,163,0.31);
+        margin-bottom: 1rem;
+    }
+
+    .imageContainer {
+        position: absolute;
+        right: 19rem;
+    }
+}
+
+
+@media (max-width:1640px)
+{
+    .imageContainer {
+        right: 15rem;
+    }
+}
+
+
+@media (max-width:1561px)
+{
+    .imageContainer {
+        right: 4rem;
+    }
+}
+
+
+@media (max-width:1358px)
+{
+    .imageContainer {
+        position: absolute;
+        right: 1rem;
+    }
+}
+
+
+@media (max-width:1311px)
+{
+    .imageContainer {
+        right: -4rem;
+    }
+}
+
+
+@media (max-width:1153px)
+{
+    .leftHeaderText
+    {
+        font-size: 2rem;
+    }
+
+    .DescriptionTitle
+    {
+        font-size: 1rem;
+    }
+
+    .description p
+    {
+        font-size: 0.9rem;
+    }
+
+    .contentList p
+    {
+        font-size: 1.2rem;
+    }
+    .bottomCardsSecond, .bottomCardsfirst
+    {
+        width: 45%;
+    }
+
+    .imageContainer 
+    {
+        top: -1rem;
+    }
+}
+
+@media (max-width:1050px)
+{
+    .imageContainer
+    {
+        display: none;
+    }
+
+
+    .bottomCardsSecond, .bottomCardsfirst
+    {
+        width: 60%;
+    }
+    .description {
+        width: 90%;
+    }
+}   
+
+
+
+@media (max-width:653px)
+{
+    
+    .bottomCardsSecond, .bottomCardsfirst
+    {
+        width: 90%;
+    }
+}
+
+
+@media (max-width:377px)
+{
+    .leftHeaderText
+    {
+        font-size: 1.2rem;
+    }
+    .leftHeaderText span
+    {
+        border: 4px solid rgb(9, 9, 9);
+        border-top: 0;
+        border-left: 0;
+        border-right: 0;
+    }
+    .DescriptionTitle {
+        font-size: 0.9rem;
+    }
+
+
+    .description p {
+        font-size: 0.7rem;
+    }
+
+
+    .FirstListContainer
+    {
+        margin-left:0 ;
+    }
+
+    .contentList p {
+        font-size: 1rem;
+    }
+
+    .bottomLeftSection h3
+    {
+        font-size: 0.8rem;
+    }
+
+    .bottomLeftSection p
+    {
+        font-size: 0.7rem;
+    }
+
+    .ArrowBottomSection 
+    {
+        width: 1.2rem;
+    }
+
+    .ArrowBottomSection  img    
+    {
+        width: 100%;
+    }
+
+    .bottomCardsSecond, .bottomCardsfirst
+    {
+        width: 100%;
+    }
+}

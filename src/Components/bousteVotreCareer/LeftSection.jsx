@@ -21,34 +21,40 @@ export default function LeftSection()
                 <div className="list">
                     <div className="FirstListContainer">
                         <div className="contentList flex">
-                            <img src={CheckIcon} alt="" />
+                            <div>
+                                <img src={CheckIcon} alt="" />
+                            </div>
                             <p>Formations courtes et certifiantes</p>
                         </div>
                         <div className="contentList flex">
-                            <img src={CheckIcon} alt="" />
+                            <div>
+                                <img src={CheckIcon} alt="" />
+                            </div>
                             <p>100% en ligne et éligibles au CPF</p>
                         </div>
                         <div className="contentList flex">
-                            <img src={CheckIcon} alt="" />
+                            <div>
+                                <img src={CheckIcon} alt="" />
+                            </div>
                             <p>Flexibilité dans l’apprentissage</p>
                         </div>
                     </div>
                     <div className="bottomcards">
                         <div className="bottomCardsfirst flex">
-                            <div>
+                            <div className="bottomLeftSection" >
                                 <h3 className="text-lg">Flexibilité dans l’apprentissage</h3>
                                 <p>Skill Course en ligne (50H)</p>
                             </div>
-                            <div>
+                            <div className="ArrowBottomSection">
                                 <img src={ArrowFlesh} alt="" />
                             </div>
                         </div>
                         <div className="bottomCardsSecond flex">
-                            <div>
+                            <div className="bottomLeftSection" >
                                 <h3 className="text-lg">Flexibilité dans l’apprentissage</h3>
                                 <p>Skill Course en ligne (50H)</p>
                             </div>
-                            <div>
+                            <div className="ArrowBottomSection">
                                 <img src={ArrowFlesh} alt="" />
                             </div>
                         </div>
