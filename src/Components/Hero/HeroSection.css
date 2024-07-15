@@ -89,6 +89,9 @@
     {
         margin-top: 10rem;
     }
+    .Hero_container .flex_content .content_left {
+        margin-top: 10rem;
+    }
 }
 
 @media (max-width:467px)
