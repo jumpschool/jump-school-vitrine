@@ -39,7 +39,7 @@ export default function Header(){
                         <Link to="/" className="hover:bg-rose-600 hover:shadow-md hover:text-white hover:px-[1%] hover:rounded-md rounded-md Text-navbar-element block text-xl xl:inline-block xl:mt-0 text-rose-600 font-semibold max-xl:w-[100%] max-xl:border-b-2 max-xl:border-rose-100 max-xl:text-md" onClick={closeMenu}>
                             Pour les entreprises
                         </Link>
-                        <Link to="/" className="hover:bg-rose-600 hover:shadow-md hover:text-white hover:px-[1%] hover:rounded-md rounded-md Text-navbar-element block text-xl xl:inline-block xl:mt-0 text-rose-600 font-semibold max-xl:w-[100%] max-xl:border-b-2 max-xl:border-rose-100 max-xl:text-md" onClick={closeMenu}>
+                        <Link to="/contact" className="hover:bg-rose-600 hover:shadow-md hover:text-white hover:px-[1%] hover:rounded-md rounded-md Text-navbar-element block text-xl xl:inline-block xl:mt-0 text-rose-600 font-semibold max-xl:w-[100%] max-xl:border-b-2 max-xl:border-rose-100 max-xl:text-md" onClick={closeMenu}>
                             Contact                        
                         </Link>
                     </div>
