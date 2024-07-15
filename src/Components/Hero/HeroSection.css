@@ -351,6 +351,14 @@
 }
 
 
+@media (max-width:1280px)
+{
+    .Hero_container .flex_content .content_left {
+        margin-top: 10rem;
+    }
+}
+
+
 @media (max-width:949px)
 {
     .bottom_container .bottom_container_flex
@@ -454,6 +462,10 @@
     margin-bottom: 15rem;
    }
 
+   .Hero_container .flex_content .content_left {
+    margin-top: 7rem;
+}
+
    
     
 }
@@ -505,6 +517,10 @@
    {
      margin-top: -6rem;
    }
+   .Hero_container .flex_content .content_left
+   {
+    margin-top:5rem ;
+   }
    
 }
 
@@ -512,6 +528,6 @@
 @media (max-width:317px)
 {
     .Hero_container .flex_content .content_left {
-        margin-top: 10rem;
+        margin-top: 1rem;
     }
 }
