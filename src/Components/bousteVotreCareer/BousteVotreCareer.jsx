@@ -6,7 +6,7 @@ export default function BousteVotreCareer()
 {
     return (
         <>
-        <div className="HolderContainer">
+        <div className="HolderContainer ">
              <div className="flex w-[78%] m-auto">
                 <LeftSection />
                 <RightSection />
