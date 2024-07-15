@@ -321,6 +321,11 @@
        
         margin-top: 14rem;
     }
+
+    .Hero_container .flex_content .content_left .header_text h2
+    {
+        font-size: 3rem;
+    }
 }
 
 
