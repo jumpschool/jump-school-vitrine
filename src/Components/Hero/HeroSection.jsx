@@ -6,10 +6,10 @@ export default function HeroSection()
 {
     return(
         <>
-            <div className="Hero_container ">
-                <div className="flex_content">
-                    <div className="content_left">
-                        <div className="header_text">
+            <div className="Hero_container">
+                <div className="flex_content ">
+                    <div className="content_left max-2xl:!w-[100vw] max-2xl:h-[50vh] max-2xl:pb-[9%]">
+                        <div className="header_text  ">
                             <h2>FORMEZ-VOUS AUX <br></br>
                                 MÉTIERS DE LA <span>TECH</span></h2>
                             <p>
@@ -17,7 +17,7 @@ export default function HeroSection()
                                 Développement Web, Data & I.A, Infrastructure & Cybersécurité et Product Design.<br></br>
                                 <strong className="text-lg">Vous aurez les codes !</strong> 
                             </p>
-                            <div className="bottom_button">
+                            <div className="bottom_button ">
                                 <Link>Choisir sa formation</Link>  
                             </div>
                         </div>
