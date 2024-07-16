@@ -12,6 +12,10 @@ export default {
         fontFamily: {
           'oswald': ['Oswald', 'sans-serif'],
         },
+        screens: {
+          '3xl': '1611px',
+          '4xl': '1933px',
+        },
       },
     },
     plugins: [],
