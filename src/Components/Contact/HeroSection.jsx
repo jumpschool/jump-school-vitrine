@@ -30,8 +30,8 @@ export default function HeroSection() {
                     <h2 className="text-white text-5xl font-bold max-sm:text-4xl">ON PAP<span className="underline decoration-rose-600">OTE ?</span></h2>
                 </div>
             </div>
-            <div className="bg-slate-900 w-[70%] py-[1%] rounded-md absolute left-[16%] top-[90%] flex justify-center items-center sm:max-xl:w-[100%] sm:max-xl:left-[0%] sm:max-xl:rounded-none sm:max-xl:py-[4%] max-sm:w-[100%] max-sm:left-[0%] max-sm:justify-start max-sm:rounded-none">
-                    <h3 className="text-3xl px-[10%] text-white font-bold text-center max-sm:text-2xl max-sm:font-normal">Se faire rappeler pour échanger sur votre projet répondre à vos questions</h3>
+            <div className="bg-slate-900 w-[70%] py-[1%] rounded-md absolute left-[16%] top-[90%] flex justify-center items-center 4xl:top-[94%] 3xl:top-[90%] sm:max-xl:w-[100%] sm:max-xl:left-[0%] sm:max-xl:rounded-none sm:max-xl:py-[4%] max-sm:w-[100%] max-sm:left-[0%] max-sm:justify-start max-sm:rounded-none">
+                    <h3 className="text-3xl px-[10%] text-white font-bold text-center 3xl:text-4xl max-sm:text-2xl max-sm:font-normal">Se faire rappeler pour échanger sur votre projet répondre à vos questions</h3>
             </div>
             </div>
         </>
