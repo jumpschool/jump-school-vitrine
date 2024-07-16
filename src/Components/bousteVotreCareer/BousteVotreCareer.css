@@ -4,6 +4,7 @@
     background: linear-gradient(67deg, rgba(222,36,92,0.217546393557423) 0%, rgba(255,255,255,0.29597776610644255) 40%);
     padding-top: 3rem;
     position: relative;
+    overflow: hidden;
 }
 
 .leftHeaderText
