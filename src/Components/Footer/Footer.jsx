@@ -1,6 +1,6 @@
 import React from 'react';
 import LogoJumpFooter from "../../assets/Logos/LogoJumpFooter";
-import GroupImage from "../../assets/images/Group.png";
+import imageFooter from "../../assets/images/imageFooter.png";
 import instagram from "../../assets/images/instagram.png";
 import youtube from "../../assets/images/youtube.png";
 import facebook from "../../assets/images/facebook.png";
@@ -11,40 +11,38 @@ export default function Footer() {
     <>
       <footer className="bg-customPink text-white py-10">
         <div className='container mx-auto px-4 md:px-6 lg:px-8'>
-          <div className='grid grid-cols-1 md:grid-cols-4 gap-6'>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
             {/* Logo and Social Icons */}
             <div className='flex flex-col items-center justify-center mt-2'>
-  <LogoJumpFooter />
-  <div className='flex justify-center space-x-3 mt-5'>
-    <div className="footer-icons flex justify-center">
-      <div className="footer-image bg-white p-2 rounded-full">
-        <img src={ facebook} alt="Instagram" className="w-6" />
-      </div>
-    </div>
-    <div className="footer-icons flex justify-center">
-      <div className="footer-image bg-white p-2 rounded-full">
-        <img src={linkedin} alt="LinkedIn" className="w-6" />
-      </div>
-    </div>
-    <div className="footer-icons flex justify-center">
-      <div className="footer-image bg-white p-2 rounded-full">
-        <img src={youtube} alt="Youtube" className="w-6" />
-      </div>
-    </div>
-    <div className="footer-icons flex justify-center">
-      <div className="footer-image bg-white p-2 rounded-full">
-        <img src={instagram} alt="Facebook" className="w-6" />
-      </div>
-    </div>
-   
-  </div>
-  <button id="footer-button" className='bg-white rounded-lg py-1 text-customPink mt-4 font-oswald font-bold px-3'>
-    Nous contacter
-  </button>
-</div>
+              <LogoJumpFooter />
+              <div className='flex justify-center space-x-3 mt-5'>
+                <div className="footer-icons flex justify-center">
+                  <div className="footer-image bg-white p-2 rounded-full">
+                    <img src={facebook} alt="Facebook" className="w-6" />
+                  </div>
+                </div>
+                <div className="footer-icons flex justify-center">
+                  <div className="footer-image bg-white p-2 rounded-full">
+                    <img src={linkedin} alt="LinkedIn" className="w-6" />
+                  </div>
+                </div>
+                <div className="footer-icons flex justify-center">
+                  <div className="footer-image bg-white p-2 rounded-full">
+                    <img src={youtube} alt="YouTube" className="w-6" />
+                  </div>
+                </div>
+                <div className="footer-icons flex justify-center">
+                  <div className="footer-image bg-white p-2 rounded-full">
+                    <img src={instagram} alt="Instagram" className="w-6" />
+                  </div>
+                </div>
+              </div>
+              <button id="footer-button" className='bg-white rounded-lg py-1 text-customPink mt-4 font-oswald font-bold px-3'>
+                Nous contacter
+              </button>
+            </div>
 
-
-            {/* liste de Formations Alternance */}
+            {/* Formations Alternance */}
             <div className='text-white font-oswald text-center md:text-left'>
               <ul className="list-none">
                 <li className="mb-3 mt-5 text-xl font-bold">Formations Alternance :</li>
@@ -75,8 +73,8 @@ export default function Footer() {
                 <li className="mb-3">Alternance UX/UX Designer</li>
                 <li className="mb-3">Consulter la validité du certificat Qualiopi</li>
               </ul>
-              <div className="flex justify-center ">
-                <img src={GroupImage} alt="Group" className="mt-5 w-32 md:w-auto " />
+              <div className="flex justify-center md:justify-start">
+                <img src={imageFooter} alt="Group" className="mt-5 w-32 md:w-auto" />
               </div>
             </div>
           </div>

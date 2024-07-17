@@ -10,8 +10,26 @@
   align-items: center;
 }
 
+@media (max-width: 1024px) {
+  .bg-jumpschool-section {
+    background-size: contain;
+    height: auto;
+    padding: 20px;
+  }
+}
 
-.bg-jumpschool-section h1 {
-  color: white; 
-  font-size: 2rem;
+@media (max-width: 768px) {
+  .bg-jumpschool-section {
+    background-size: cover;
+    height: auto;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .bg-jumpschool-section {
+    background-size: cover;
+    height: auto;
+    padding: 10px;
+  }
 }
