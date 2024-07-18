@@ -14,33 +14,35 @@ export default function Footer() {
           <div className='grid grid-cols-1 md:grid-cols-4 gap-6'>
             {/* Logo and Social Icons */}
             <div className='flex flex-col items-center justify-center mt-2'>
-              <LogoJumpFooter />
-              <div className='flex justify-center space-x-3 mt-5'>
-                <div className="footer-icons flex justify-center">
-                  <div className="footer-image bg-white p-2 rounded-full">
-                    <img src={instagram} alt="Instagram" className="w-8" />
-                  </div>
-                </div>
-                <div className="footer-icons flex justify-center">
-                  <div className="footer-image bg-white p-2 rounded-full">
-                    <img src={youtube} alt="Youtube" className="w-8" />
-                  </div>
-                </div>
-                <div className="footer-icons flex justify-center">
-                  <div className="footer-image bg-white p-2 rounded-full">
-                    <img src={facebook} alt="Facebook" className="w-8" />
-                  </div>
-                </div>
-                <div className="footer-icons flex justify-center">
-                  <div className="footer-image bg-white p-2 rounded-full">
-                    <img src={linkedin} alt="LinkedIn" className="w-8" />
-                  </div>
-                </div>
-              </div>
-              <button id="footer-button" className='bg-white rounded-lg py-1 text-customPink mt-4 font-oswald font-bold px-3'>
-                Nous contacter
-              </button>
-            </div>
+  <LogoJumpFooter />
+  <div className='flex justify-center space-x-3 mt-5'>
+    <div className="footer-icons flex justify-center">
+      <div className="footer-image bg-white p-2 rounded-full">
+        <img src={ facebook} alt="Instagram" className="w-6" />
+      </div>
+    </div>
+    <div className="footer-icons flex justify-center">
+      <div className="footer-image bg-white p-2 rounded-full">
+        <img src={linkedin} alt="LinkedIn" className="w-6" />
+      </div>
+    </div>
+    <div className="footer-icons flex justify-center">
+      <div className="footer-image bg-white p-2 rounded-full">
+        <img src={youtube} alt="Youtube" className="w-6" />
+      </div>
+    </div>
+    <div className="footer-icons flex justify-center">
+      <div className="footer-image bg-white p-2 rounded-full">
+        <img src={instagram} alt="Facebook" className="w-6" />
+      </div>
+    </div>
+   
+  </div>
+  <button id="footer-button" className='bg-white rounded-lg py-1 text-customPink mt-4 font-oswald font-bold px-3'>
+    Nous contacter
+  </button>
+</div>
+
 
             {/* liste de Formations Alternance */}
             <div className='text-white font-oswald text-center md:text-left'>
@@ -73,8 +75,8 @@ export default function Footer() {
                 <li className="mb-3">Alternance UX/UX Designer</li>
                 <li className="mb-3">Consulter la validité du certificat Qualiopi</li>
               </ul>
-              <div className="flex justify-center">
-                <img src={GroupImage} alt="Group" className="mt-5 w-32 md:w-auto" />
+              <div className="flex justify-center ">
+                <img src={GroupImage} alt="Group" className="mt-5 w-32 md:w-auto " />
               </div>
             </div>
           </div>

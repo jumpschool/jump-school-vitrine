@@ -1,0 +1,92 @@
+.TestHolder {
+    background: #071323;
+    color: white;
+    text-align: center;
+    padding: 4rem 0;
+}
+
+
+
+.TestTile h2
+{
+    font-size: 3.4rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.TestTile h2 span:nth-child(1)
+{
+    color: #FDCED8;
+}
+
+
+.TestTile h2 span:nth-child(2)
+{
+    border: 6px solid #FDCED8;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+
+}
+
+.TestDescription
+{
+    width: 80%;
+    margin: auto;
+}
+
+
+.TestDescription div:nth-child(1)
+{
+    width: 40%;
+    margin: auto;
+}
+
+.TestDescription div:nth-child(2)
+{
+    width: 60%;
+    margin: auto;
+    
+}
+
+
+
+
+.TestDescription p
+{
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+
+@media (max-width:463px)
+{
+    .TestTile h2
+    {
+        font-size: 2.2rem;
+    }
+
+    .TestDescription div:nth-child(1)
+    {
+        width: 100%;
+    }
+
+    .TestDescription div:nth-child(2)
+    {
+        width: 100%;
+    }
+
+    .TestDescription p {
+        font-size: 1rem;
+    }
+}
+
+
+@media (max-width:298px)
+{
+    .TestTile h2 {
+        font-size: 1.9rem;
+    }
+
+    
+}
