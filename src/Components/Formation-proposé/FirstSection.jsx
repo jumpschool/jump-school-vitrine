@@ -18,9 +18,7 @@ export default function FirstSection() {
       </span>
     </span>
   </h2>
-</div>
-
-
+       </div>
         <CategorieSection />
          <Cardes />
         
