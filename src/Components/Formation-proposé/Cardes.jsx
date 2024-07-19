@@ -49,7 +49,7 @@ function Cardes() {
             <div className="flex items-center justify-center pt-16 pb-40 text-3xl font-bold text-center text-white">
               <h3>UX/UI Design</h3>
             </div>
-            <div className="bottom_card z-20  hover:bg-customPink">
+            <div className="bottom_card z-20">
             <button className='text-customPink  hover:text-white  text-button flex flex-col items-center justify-center text-xl font-bold'>
                  découvrir la formation
                 </button> 

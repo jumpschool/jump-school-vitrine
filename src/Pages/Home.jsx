@@ -4,7 +4,6 @@ import BousteCareer from "../Components/bousteVotreCareer/BousteVotreCareer";
 import Rapport from "../Components/Home/RapportInsersion/Rapport";
 import FirstSection from '../Components/Formation-proposé/FirstSection'
 import JumpSchoolSection from '../Components/JumpSchool/JumpSchoolSection'
-
 export default function Home(){
     return (
         <>
@@ -12,8 +11,8 @@ export default function Home(){
         <FirstSection/>
         <Rapport/>
         <BousteCareer />
-        <Question/>
         <JumpSchoolSection/>
+        <Question/>
         </>
     )
 }

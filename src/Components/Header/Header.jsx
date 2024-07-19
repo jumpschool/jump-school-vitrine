@@ -17,29 +17,29 @@ export default function Header(){
     };
     return (
         <>
-        <nav className="navbar bg-white rounded-b-2xl fixed top-[0.01%] shadow-md flex w-full z-10 max-sm:justify-between sm:max-xl:justify-between max-xl:flex-col sm:max-xl:px-[3%] max-sm:flex-col max-sm:px-[3%]">
+        <nav className="navbar bg-white rounded-b-2xl fixed top-[0.01%] shadow-md flex w-full z-30 max-sm:justify-between sm:max-xl:justify-between max-xl:flex-col sm:max-xl:px-[3%] max-sm:flex-col max-sm:px-[3%]">
             <Link to='' className="Logo py-[1.5%] w-[23%] flex justify-end">
                 <LogoJumpit/>
             </Link>
 
             <div className={`NavbarLinks flex-grow w-full block  xl:w-auto  xl:flex xl:items-center xl:justify-between max-xl:flex-col bg-rosa-200  ${isMenuOpen ? '' : 'hidden'} xl:block`}>
                     <div className="NavbarLinks_menu max-sm:block sm:max-xl:block   w-[80%] mt-[1%] flex gap-[1.25%] xl:justify-center sm:max-xl:pb-[1%]">
-                        <Link to="/" className="hover:bg-rose-600 hover:shadow-md hover:text-white hover:px-[1%] hover:rounded-md rounded-md Text-navbar-element block text-xl xl:inline-block xl:mt-0 text-rose-600 font-semibold max-xl:w-[100%] max-xl:border-y-2 max-xl:border-rose-100 max-xl:text-md" onClick={closeMenu}>
+                        <Link to="/" className="hover:bg-rose-600 hover:shadow-md hover:text-white hover:px-[1%] hover:rounded-md rounded-md Text-navbar-element block text-xl xl:inline-block xl:mt-0 text-rose-600 font-semibold max-xl:w-[100%] max-xl:border-y-2 max-xl:border-rose-100 max-xl:text-md max-sm:rounded-none" onClick={closeMenu}>
                                 Accueil
                         </Link>
-                        <Link to="/" className="hover:bg-rose-600 hover:shadow-md hover:text-white hover:px-[1%] hover:rounded-md rounded-md Text-navbar-element block text-xl xl:inline-block xl:mt-0 text-rose-600   font-semibold max-xl:w-[100%] max-xl:border-b-2 max-xl:border-rose-100 max-xl:text-md" onClick={closeMenu}>
+                        <Link to="/" className="hover:bg-rose-600 hover:shadow-md hover:text-white hover:px-[1%] hover:rounded-md rounded-md Text-navbar-element block text-xl xl:inline-block xl:mt-0 text-rose-600   font-semibold max-xl:w-[100%] max-xl:border-b-2 max-xl:border-rose-100 max-xl:text-md max-sm:rounded-none" onClick={closeMenu}>
                             Notre ecole
                         </Link>
-                        <Link to="/" className="hover:bg-rose-600 hover:shadow-md hover:text-white hover:px-[1%] hover:rounded-md rounded-md Text-navbar-element block text-xl xl:inline-block xl:mt-0 text-rose-600 font-semibold max-sxl:w-[100%] max-xl:border-b-2 max-xl:border-rose-100 max-xl:text-md" onClick={closeMenu}>
+                        <Link to="/" className="hover:bg-rose-600 hover:shadow-md hover:text-white hover:px-[1%] hover:rounded-md rounded-md Text-navbar-element block text-xl xl:inline-block xl:mt-0 text-rose-600 font-semibold max-sxl:w-[100%] max-xl:border-b-2 max-xl:border-rose-100 max-xl:text-md max-sm:rounded-none" onClick={closeMenu}>
                             Admission
                         </Link>
-                        <Link to="/" className="hover:bg-rose-600 hover:shadow-md hover:text-white hover:px-[1%] hover:rounded-md rounded-md Text-navbar-element block  text-xl xl:inline-block xl:mt-0 text-rose-600 font-semibold max-xl:w-[100%] max-xl:border-b-2 max-xl:border-rose-100 max-xl:text-md" onClick={closeMenu}>
+                        <Link to="/" className="hover:bg-rose-600 hover:shadow-md hover:text-white hover:px-[1%] hover:rounded-md rounded-md Text-navbar-element block  text-xl xl:inline-block xl:mt-0 text-rose-600 font-semibold max-xl:w-[100%] max-xl:border-b-2 max-xl:border-rose-100 max-xl:text-md max-sm:rounded-none" onClick={closeMenu}>
                             Formations
                         </Link>
-                        <Link to="/" className="hover:bg-rose-600 hover:shadow-md hover:text-white hover:px-[1%] hover:rounded-md rounded-md Text-navbar-element block text-xl xl:inline-block xl:mt-0 text-rose-600 font-semibold max-xl:w-[100%] max-xl:border-b-2 max-xl:border-rose-100 max-xl:text-md" onClick={closeMenu}>
+                        <Link to="/" className="hover:bg-rose-600 hover:shadow-md hover:text-white hover:px-[1%] hover:rounded-md rounded-md Text-navbar-element block text-xl xl:inline-block xl:mt-0 text-rose-600 font-semibold max-xl:w-[100%] max-xl:border-b-2 max-xl:border-rose-100 max-xl:text-md max-sm:rounded-none" onClick={closeMenu}>
                             Pour les entreprises
                         </Link>
-                        <Link to="/contact" className="hover:bg-rose-600  hover:shadow-md hover:text-white hover:px-[1%] hover:rounded-md rounded-md Text-navbar-element block text-xl xl:inline-block xl:mt-0 text-rose-600 font-semibold max-xl:w-[100%] max-xl:border-b-2 max-xl:border-rose-100 max-xl:text-md" onClick={closeMenu}>
+                        <Link to="/contact" className="hover:bg-rose-600  hover:shadow-md hover:text-white hover:px-[1%] hover:rounded-md rounded-md Text-navbar-element block text-xl xl:inline-block xl:mt-0 text-rose-600 font-semibold max-xl:w-[100%] max-xl:border-b-2 max-xl:border-rose-100 max-xl:text-md max-sm:rounded-none" onClick={closeMenu}>
                             Contact                        
                         </Link>
                     </div>
