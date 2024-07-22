@@ -1,15 +1,14 @@
 .title-container {
-  background-image: url('../../assets/images/bgtitre.png');
+  background-image: url('../../assets/images/Formation-proposé/bgtitre.png');
   background-size: cover;
   background-position: center;
-  padding: 10px;
   text-align: center;
 }
 
 
 
 .section-container{
-  background-image: url('../../assets/images/BgSection.png');
+  background-image: url('../../assets/images/Formation-proposé/BgSection.png');
   background-size: cover;
   background-position: center;
 
@@ -22,10 +21,11 @@
 
 .section-container::after {
   content: '';
-  background-image: url('../../assets/images/bgdown.png');
+  background-image: url('../../assets/images/Formation-proposé/bgdown.png');
   background-size: cover;  
   background-position: bottom center;
-  position: absolute;
+  position: absolute; 
+  top:63%;
   left: 0;
   bottom: 0;
   width: 100%;

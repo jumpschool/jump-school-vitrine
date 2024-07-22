@@ -1,10 +1,10 @@
 import React from 'react';
 import LogoJumpFooter from "../../assets/Logos/LogoJumpFooter";
-import imageFooter from "../../assets/images/imageFooter.png";
-import instagram from "../../assets/images/instagram.png";
-import youtube from "../../assets/images/youtube.png";
-import facebook from "../../assets/images/facebook.png";
-import linkedin from "../../assets/images/linkedin.png";
+import imageFooter from "../../assets/images/Footer/imageFooter.png";
+import instagram from "../../assets/images/Footer/instagram.png";
+import youtube from "../../assets/images/Footer/youtube.png";
+import facebook from "../../assets/images/Footer/facebook.png";
+import linkedin from "../../assets/images/Footer/linkedin.png";
 
 export default function Footer() {
   return (

@@ -1,7 +1,7 @@
 import React from 'react';
-import Group from "../../assets/images/Group.png";
-
+import Group from "../../assets/images/Formation-proposé/JumpLogo.png";
 import './jump.css';
+
 
 function JumpSchoolSection() {
   return (
@@ -15,7 +15,6 @@ function JumpSchoolSection() {
               </span>
             </h1>
           </div>
-          
           <div className='space-y-3 lg:space-y-5 pl-5 lg:pl-20 py-2 lg:py-3'>
             <div className='bg-white px-3 lg:px-4 pt-2 pb-3 lg:pb-4 rounded-xl shadow'>
               <h2 className='text-xl lg:text-2xl pb-1 lg:pb-2 rounded text-pink-500 font-bold'>
@@ -26,7 +25,7 @@ function JumpSchoolSection() {
                 réalisation de projets permet de se préparer au monde professionnel et de justifier auprès des recruteurs de hard skills et de soft skills.
               </p>
             </div>
-
+    
             <div className='bg-white px-3 lg:px-4 pt-2 pb-3 lg:pb-4 rounded-xl shadow'>
               <h2 className='text-xl lg:text-2xl pb-1 lg:pb-2 rounded text-pink-500 font-bold'>
                 Flexibilité dans l’apprentissage
