@@ -1,0 +1,27 @@
+name: ci
+
+on:
+  push:
+    branches:
+      - "!main"
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js for cache
+        uses: actions/setup-node@v4
+        with:
+          node-version: "21 "
+          cache: "npm" #cache for dependencies and next js build
+
+      - name: Install modules
+        run: npm install
+
+      - name: Build project
+        run: npm run build

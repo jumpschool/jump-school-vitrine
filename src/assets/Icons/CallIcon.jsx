@@ -5,7 +5,7 @@ export default function CallIcon(){
         <>
 
 
-    <svg
+    <svg className=" xl:max-2xl:h-full"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
       width="40"

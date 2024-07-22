@@ -39,16 +39,16 @@ export default function Header(){
                         <Link to="/" className="hover:bg-rose-600 hover:shadow-md hover:text-white hover:px-[1%] hover:rounded-md rounded-md Text-navbar-element block text-xl xl:inline-block xl:mt-0 text-rose-600 font-semibold max-xl:w-[100%] max-xl:border-b-2 max-xl:border-rose-100 max-xl:text-md" onClick={closeMenu}>
                             Pour les entreprises
                         </Link>
-                        <Link to="/contact" className="hover:bg-rose-600 hover:shadow-md hover:text-white hover:px-[1%] hover:rounded-md rounded-md Text-navbar-element block text-xl xl:inline-block xl:mt-0 text-rose-600 font-semibold max-xl:w-[100%] max-xl:border-b-2 max-xl:border-rose-100 max-xl:text-md" onClick={closeMenu}>
+                        <Link to="/contact" className="hover:bg-rose-600  hover:shadow-md hover:text-white hover:px-[1%] hover:rounded-md rounded-md Text-navbar-element block text-xl xl:inline-block xl:mt-0 text-rose-600 font-semibold max-xl:w-[100%] max-xl:border-b-2 max-xl:border-rose-100 max-xl:text-md" onClick={closeMenu}>
                             Contact                        
                         </Link>
                     </div>
-                    <div className="w-[30%] flex  justify-evenly max-xl:justify-between max-xl:w-[20%] max-xl:pb-[1%] rounded-md max-sm:w-[35%] max-sm:py-[2%] max-sm:justify-between sm:max-xl:flex-row-reverse">
+                    <div className="w-[30%] flex  justify-evenly xl:max-2xl:mt-[1%] max-xl:justify-between max-xl:w-[30%] max-xl:pb-[1%] rounded-md max-sm:flex-row-reverse max-sm:w-[50%] max-sm:py-[2%] max-sm:justify-between ">
                         <div className="relative">
-                                <div>
-                                    <button className="relative group">
-                                        <CallIcon className="callusicon" />
-                                        <div className="absolute right-[2%] top-[85%] w-[600%] py-[60%] bg-white text-dark rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-2000 ease-out delay-100 hidden group-hover:block">
+                                <div className="2xl:max-3xl:h-[8vh]">
+                                    <button className="relative group xl:max-2xl:h-full">
+                                        <CallIcon className="callusicon"  />
+                                        <div className="absolute right-[2%] top-[85%] w-[600%] py-[60%] bg-white text-dark rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-2000 ease-out delay-100 hidden group-hover:block sm:max-xl:right-auto  max-sm:right-auto ">
                                                 <p className="text-xl font-bold">Téléphonez-nous au :</p>
                                                 <div className="border-b-2 border-black pb-[2%]">
                                                     <p className="text-2xl font-bold flex items-center justify-center mt-2">
@@ -57,14 +57,14 @@ export default function Header(){
                                                     </p>
                                                 </div>
                                                 <p className="my-[4%]">Ou envoyez-nous un message :</p>
-                                                <button className=" bg-rose-600 hover:bg-white hover:text-rose-600 hover:border-2 hover:border-rose-600 text-white font-bold px-[4%] py-[2%] rounded-md">
+                                                <button className=" bg-rose-600 hover:bg-white hover:text-rose-600 hover:border-2 hover:border-rose-600   text-white font-bold px-[4%] py-[2%] rounded-md">
                                                     Nous contacter
                                                 </button>
                                         </div>
                                     </button>
                                 </div>
                         </div>
-                        <button className="hover:bg-white hover:border-2 hover:border-rose-600 hover:text-rose-600  hover:rounded-md Text-navbar-element bg-rose-600 text-lg px-[7%] text-white font-bold rounded-lg">
+                        <button className="hover:bg-white hover:border-2 hover:border-rose-600 hover:text-rose-600  hover:rounded-lg  border-2 border-rose-600 Text-navbar-element bg-rose-600 text-lg px-[7%] text-white font-bold rounded-lg">
                             Candidater
                         </button>
 
