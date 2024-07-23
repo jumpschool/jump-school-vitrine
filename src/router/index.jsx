@@ -3,6 +3,7 @@ import Home from '../Pages/Home'
 import NotFound from '../Pages/NotFound'
 import Layout from '../Layouts/Layout'
 import Contact from '../Pages/Contact'
+import Admission from '../Pages/Admission'
 export const router = createBrowserRouter([
     {
         element: <Layout/>,
@@ -14,9 +15,14 @@ export const router = createBrowserRouter([
             {
                 path: '*',
                 element: <NotFound/>
-            },{
+            },
+            {
                 path:"/contact",
                 element: <Contact/>
+            },
+            {
+                path:"/Admission",
+                element: <Admission/>
             }
         ]
 
