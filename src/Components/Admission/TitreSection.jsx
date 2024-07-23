@@ -1,5 +1,4 @@
 import React from 'react';
-import './Titre.css'; 
 
 export default function TitreSection() {
   return (
