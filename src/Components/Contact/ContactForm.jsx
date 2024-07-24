@@ -13,42 +13,24 @@ export default function ContactForm() {
 
     const data = {
       properties: [
-
-        {"property": "firstname", "value":firstName},
-        {"property": "lastname", "value":lastName},
-        {"property": "email", "value":email},
-        {"property": "phone", "value":phoneNumber},
-        {"property": "message", "value":message},
-    ],
+        { property: "firstname", value: firstName },
+        { property: "lastname", value: lastName },
+        { property: "email", value: email },
+        { property: "phone", value: phoneNumber },
+        { property: "message", value: message },
+      ],
     };
 
     try {
-      const response = await axios.post(
-        `https://api.hubapi.com/crm/v3/objects/contacts`,
-        data,
-        {
-          headers: {
-            "Content-Type": "application/json",
-            "Authorization": `Bearer ${import.meta.env.VITE_Hubspot_API}`, 
-          },
+      const response = await axios.post('/api/crm/v3/objects/contacts', data, {
+        headers: {
+          'Authorization': `Bearer ${import.meta.env.VITE_Hubspot_API}`,
+          'Content-Type': 'application/json'
         }
-      );
-      console.log(response);
-      console.log(data());
-
-      if (response.status === 200) {
-        console.log(data()); 
-        alert("Submission successful");
-      } else {
-        console.log(data()); 
-        const errorMessage = response.data && response.data.message
-          ? response.data.message
-          : "An unknown error occurred";
-        alert(`Submission failed: ${errorMessage}`);
-      }
-    } catch(e){
-      console.error(e);
-      console.log('excpetion catched');
+      });
+      console.log(response.data);
+    } catch (error) {
+      console.error(error);
     }
 
     setFirstName("");
@@ -60,21 +42,41 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} className="mt-[15%]">
-      <input name="firstname" placeholder="First Name" value={firstName} onChange={(e) => setFirstName(e.target.value)}/>
+      <input
+        name="firstname"
+        placeholder="First Name"
+        value={firstName}
+        onChange={(e) => setFirstName(e.target.value)}
+      />
       <br />
-
-      <input name="lastname" placeholder="Last Name" value={lastName} onChange={(e) => setLastName(e.target.value)}/>
+      <input
+        name="lastname"
+        placeholder="Last Name"
+        value={lastName}
+        onChange={(e) => setLastName(e.target.value)}
+      />
       <br />
-
-      <input name="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)}/>
+      <input
+        name="email"
+        placeholder="Email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+      />
       <br />
-
-      <input name="phoneNumber" placeholder="Phone Number" value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)}/>
+      <input
+        name="phoneNumber"
+        placeholder="Phone Number"
+        value={phoneNumber}
+        onChange={(e) => setPhoneNumber(e.target.value)}
+      />
       <br />
-
-      <input name="message" placeholder="Please add information regarding your inquiry" value={message} onChange={(e) => setMessage(e.target.value)}/>
+      <input
+        name="message"
+        placeholder="Please add information regarding your inquiry"
+        value={message}
+        onChange={(e) => setMessage(e.target.value)}
+      />
       <br />
-
       <button type="submit">Submit</button>
     </form>
   );
