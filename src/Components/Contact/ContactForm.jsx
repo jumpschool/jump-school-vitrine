@@ -33,6 +33,7 @@ export default function ContactForm() {
           },
         }
       );
+      console.log(response);
       console.log(data());
 
       if (response.status === 200) {
@@ -47,6 +48,7 @@ export default function ContactForm() {
       }
     } catch(error) {
       console.error("Error:", error);
+      console.log(error);
       alert("Submission failed catched");
     }
 
