@@ -1,61 +1,72 @@
-import { useRef, useState } from "react";
-import FirstName from './Contactfield/FirstName'
-import LastName from './Contactfield/LastName'
-import Message from "./Contactfield/Message";
-import Email from "./Contactfield/Email";
-import PhoneNumber from "./Contactfield/PhoneNumber";
-import PrivacyPolicy from "./Contactfield/PrivacyPolicy";
-import SendMessage from "./Contactfield/SendMessage";
+import React, { useState } from "react";
+import axios from "axios";
 
-export default function ContactForm(){
+export default function ContactForm() {
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [message, setMessage] = useState("");
 
-    const form = useRef();
-    const [isChecked1, setChecked1] = useState(false);
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-    const sendEmail = (e) => {
-        e.preventDefault();
+    const data = {
+      properties: [
+        { property: "firstname", value: firstName },
+        { property: "lastname", value: lastName },
+        { property: "email", value: email },
+        { property: "phone", value: phoneNumber },
+        { property: "message", value: message },
+      ],
+    };
 
-        if (!isChecked1) {
-            toast.error("Veuillez accepter les champs obligatoires pour continuer.");
-            return;
+    try {
+      const response = await axios.post(
+        `https://api.hubapi.com/contacts/v1/contact/?hapikey=${import.meta.env.VITE_Hubspot_API}`,
+        data,
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
         }
+      );
+
+      if (response.status === 200) {
+        alert("Submission successful");
+      } else {
+        alert("Submission failed");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      alert("Submission failed");
     }
 
-    return (
-        <>
-        <div className="relative">
-                <div className="second-contact-background"></div>
-                <div className="second-contact-background-text flex justify-center">
-                    <h2 className="text-white font-bold text-3xl">Envoyez-nous<span className="text-[#39DDF5]"> un message !</span></h2>
-                </div>
-            </div>
-            <Toaster />
-            <div className="min-h-screen .bg-slate-900 text-amber-50 overflow-x-hidden h-full w-[98vw] flex !justify-center m-auto">
-                <div className="container px-6 py-10 mx-auto">
-                    <div className="lg:flex lg:items-center lg:-mx-10 justify-center">
-                        <div className="lg:w-1/2 lg:mx-10">
-                            <form className={'relative mb-[10%] mt-6 max-sm:mt-6'} ref={form} onSubmit={sendEmail}>
-                                <div className="-mx-2 md:items-center md:flex">
-                                    <FirstName />
-                                    <LastName />
-                                </div>
-                                <div className="-mx-2 md:items-center md:flex">
-                                    <PhoneNumber />
-                                    <Email />
-                                </div>
-                                <Message />
-                                <PrivacyPolicy 
-                                    isChecked1={isChecked1}
-                                    setChecked1={setChecked1}
-                                />
-                                <SendMessage />
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        
-        
-        </>
-    )
+    setFirstName("");
+    setLastName("");
+    setEmail("");
+    setPhoneNumber("");
+    setMessage("");
+  };
+
+  return (
+    <form onSubmit={handleSubmit} className="mt-[15%]">
+      <input name="firstName" placeholder="First Name" value={firstName} onChange={(e) => setFirstName(e.target.value)}/>
+      <br />
+
+      <input name="lastName" placeholder="Last Name" value={lastName} onChange={(e) => setLastName(e.target.value)}/>
+      <br />
+
+      <input name="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)}/>
+      <br />
+
+      <input name="phoneNumber" placeholder="Phone Number" value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)}/>
+      <br />
+
+      <input name="message" placeholder="Please add information regarding your inquiry" value={message} onChange={(e) => setMessage(e.target.value)}/>
+      <br />
+
+      <button type="submit">Submit</button>
+    </form>
+  );
 }

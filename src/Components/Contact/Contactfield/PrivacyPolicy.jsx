@@ -1,7 +1,7 @@
 import {useState } from "react";
 
-import checkbox from "../../../assets/icons/checkbox.png";
-import CheckedCheckbox from "../../../assets/icons/checkedCheckbox.png";
+import checkbox from "../../../assets/Icons/checkboxJ.png";
+import CheckedCheckbox from "../../../assets/Icons/checkedbox.png";
 
 export default function PrivacyPolicy({ isChecked1, setChecked1 }) {
     const [isChecked, setChecked] = useState(false);
@@ -18,7 +18,7 @@ export default function PrivacyPolicy({ isChecked1, setChecked1 }) {
         <>
             <section>
                 <div>
-                    <p className="mt-4 text-white text-sm mb-5">
+                    <p className="mt-4 text-black text-sm mb-5">
                         O'clock s'engage à protéger et à respecter votre vie privée. Nous n'utiliserons vos données personnelles que pour administrer votre compte et vous fournir les produits et services demandés.
                     </p>
                 </div>
@@ -28,7 +28,7 @@ export default function PrivacyPolicy({ isChecked1, setChecked1 }) {
                         <a onClick={checkingBox} id="link-checkbox" type="checkbox">
                             {isChecked ? <img src={CheckedCheckbox} alt="" /> : <img src={checkbox} alt="" />}
                         </a>
-                        <label htmlFor="link-checkbox" className="ms-2 text-sm text-white dark:text-gray-300">
+                        <label htmlFor="link-checkbox" className="ms-2 text-sm text-black dark:text-gray-300">
                             J'accepte de recevoir d'autres communications de O'clock.
                         </label>
                     </div>
@@ -36,7 +36,7 @@ export default function PrivacyPolicy({ isChecked1, setChecked1 }) {
                         <a onClick={checkingBox1} id="link-checkbox" type="checkbox">
                             {isChecked1 ? <img src={CheckedCheckbox} alt="" /> : <img src={checkbox} alt="" />}
                         </a>
-                        <label htmlFor="link-checkbox" className="ms-2 text-sm text-white dark:text-gray-300 required">
+                        <label htmlFor="link-checkbox" className="ms-2 text-sm text-black dark:text-gray-300 required">
                             J'accepte d'être contacté par un conseiller pour recevoir une réponse.*
                         </label>
                     </div>
