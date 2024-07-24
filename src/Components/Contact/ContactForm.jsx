@@ -5,7 +5,7 @@ export default function ContactForm() {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
   const [message, setMessage] = useState("");
 
   const handleSubmit = async (e) => {
@@ -17,7 +17,7 @@ export default function ContactForm() {
         {"property": "firstname", "value":firstName},
         {"property": "lastname", "value":lastName},
         {"property": "email", "value":email},
-        {"property": "phone", "value":phone},
+        {"property": "phone", "value":phoneNumber},
         {"property": "message", "value":message},
     ],
     };
@@ -45,7 +45,6 @@ export default function ContactForm() {
         alert(`Submission failed: ${errorMessage}`);
       }
     } catch (error) {
-        console.log(data()); 
       console.error("Error:", error);
       alert("Submission failed");
     }
@@ -53,7 +52,7 @@ export default function ContactForm() {
     setFirstName("");
     setLastName("");
     setEmail("");
-    setPhone("");
+    setPhoneNumber("");
     setMessage("");
   };
 
@@ -68,7 +67,7 @@ export default function ContactForm() {
       <input name="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)}/>
       <br />
 
-      <input name="phone" placeholder="Phone Number" value={phone} onChange={(e) => setPhoneNumber(e.target.value)}/>
+      <input name="phoneNumber" placeholder="Phone Number" value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)}/>
       <br />
 
       <input name="message" placeholder="Please add information regarding your inquiry" value={message} onChange={(e) => setMessage(e.target.value)}/>
