@@ -23,9 +23,7 @@ export default function ContactForm() {
 
     try {
       const response = await axios.post(
-        `https://api.hubapi.com/contacts/v1/contact/?hapikey=${
-          import.meta.env.VITE_Hubspot_API
-        }`,
+        `https://api.hubapi.com/contacts/v1/contact/?hapikey=${import.meta.env.VITE_Hubspot_API}`,
         data,
         {
           headers: {
