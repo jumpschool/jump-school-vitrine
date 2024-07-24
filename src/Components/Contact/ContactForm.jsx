@@ -35,7 +35,10 @@ export default function ContactForm() {
       if (response.status === 200) {
         alert("Submission successful");
       } else {
-        alert("Submission failed");
+        const errorMessage = response.data && response.data.message
+          ? response.data.message
+          : "An unknown error occurred";
+        alert(`Submission failed: ${errorMessage}`);
       }
     } catch (error) {
       console.error("Error:", error);
