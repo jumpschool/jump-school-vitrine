@@ -1,60 +1,81 @@
-import { useRef, useState } from "react";
-import FirstName from './Contactfield/FirstName'
-import LastName from './Contactfield/LastName'
-import Message from "./Contactfield/Message";
-import Email from "./Contactfield/Email";
-import PhoneNumber from "./Contactfield/PhoneNumber";
-import PrivacyPolicy from "./Contactfield/PrivacyPolicy";
-import SendMessage from "./Contactfield/SendMessage";
-import toast, { Toaster } from 'react-hot-toast';
-import decoration from "../../assets/images/decoration.png"
-import React, { useEffect } from 'react';
+import React, { useState } from "react";
+import axios from "axios";
 
+export default function ContactForm() {
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [message, setMessage] = useState("");
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
+    const data = {
+      properties: [
 
-export default function ContactForm(){
+        {"property": "firstname", "value":firstName},
+        {"property": "lastname", "value":lastName},
+        {"property": "email", "value":email},
+        {"property": "phone", "value":phoneNumber},
+        {"property": "message", "value":message},
+    ],
+    };
 
-    // const form = useRef();
-    // const [isChecked1, setChecked1] = useState(false);
-
-    // const sendEmail = (e) => {
-    //     e.preventDefault();
-
-    //     if (!isChecked1) {
-    //         toast.error("Veuillez accepter les champs obligatoires pour continuer.");
-    //         return;
-    //     }
-    // }
-    useEffect(() => {
-        // Load HubSpot Form Script
-        const script = document.createElement('script');
-        script.src = 'https://js.hsforms.net/forms/v2.js';
-        script.async = true;
-        script.defer = true;
-        document.body.appendChild(script);
-
-        // Cleanup function to remove the script after component unmounts
-        return () => {
-            document.body.removeChild(script);
+    try {
+      const response = await axios.post(
+        `https://api.hubapi.com/crm/v3/objects/contacts`,
+        data,
+        {
+          headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${import.meta.env.VITE_Hubspot_API}`, 
+          },
         }
-    }, []);
+      );
+      console.log(response);
+      console.log(data());
 
-    useEffect(() => {
-        if (window.hbspt) {
-            window.hbspt.forms.create({
-                portalId: '',
-                formId: '',
-                target: '#hubspot-form',
-                // inlineMessage: 'Thanks for contacting us!',
-                onFormSubmit: () => toast.success('Form submitted successfully!')
-            });
-        }
-    }, []);
+      if (response.status === 200) {
+        console.log(data()); 
+        alert("Submission successful");
+      } else {
+        console.log(data()); 
+        const errorMessage = response.data && response.data.message
+          ? response.data.message
+          : "An unknown error occurred";
+        alert(`Submission failed: ${errorMessage}`);
+      }
+    } catch(e){
+      console.error(e);
+      console.log('excpetion catched');
+    }
 
-    return (
-        <div>
-            <div id="hubspot-form"></div>
-        </div>
-    );
+    setFirstName("");
+    setLastName("");
+    setEmail("");
+    setPhoneNumber("");
+    setMessage("");
+  };
+
+  return (
+    <form onSubmit={handleSubmit} className="mt-[15%]">
+      <input name="firstname" placeholder="First Name" value={firstName} onChange={(e) => setFirstName(e.target.value)}/>
+      <br />
+
+      <input name="lastname" placeholder="Last Name" value={lastName} onChange={(e) => setLastName(e.target.value)}/>
+      <br />
+
+      <input name="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)}/>
+      <br />
+
+      <input name="phoneNumber" placeholder="Phone Number" value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)}/>
+      <br />
+
+      <input name="message" placeholder="Please add information regarding your inquiry" value={message} onChange={(e) => setMessage(e.target.value)}/>
+      <br />
+
+      <button type="submit">Submit</button>
+    </form>
+  );
 }

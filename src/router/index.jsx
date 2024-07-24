@@ -24,6 +24,10 @@ export const router = createBrowserRouter([
                 path:"/Admission",
                 element: <Admission/>
             }
+            ,{
+                path:"/contact",
+                element: <Contact/>
+            }
         ]
 
     }
