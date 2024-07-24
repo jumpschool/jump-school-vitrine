@@ -9,7 +9,7 @@ import CurrentStatus from "./AdmissionField/CurrentStatus"
 
 export default function AdmissionForm() {
   return (
-    <div className="px-48 pb-10">
+    <div className="px-48 pb-4">
       <div className="flex">
       <Nom/>
       <Prénom/>
