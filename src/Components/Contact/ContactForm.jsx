@@ -9,6 +9,8 @@ import SendMessage from "./Contactfield/SendMessage";
 import toast, { Toaster } from 'react-hot-toast';
 import decoration from "../../assets/images/decoration.png"
 import React, { useEffect } from 'react';
+import './Herosection.css'
+
 
 
 
@@ -26,19 +28,18 @@ export default function ContactForm(){
     //         return;
     //     }
     // }
-    useEffect(() => {
-        // Load HubSpot Form Script
-        const script = document.createElement('script');
-        script.src = 'https://js.hsforms.net/forms/v2.js';
-        script.async = true;
-        script.defer = true;
-        document.body.appendChild(script);
+    // useEffect(() => {
+    //     const script = document.createElement('script');
+    //     script.src = 'https://js.hsforms.net/forms/v2.js';
+    //     script.async = true;
+    //     script.defer = true;
+    //     document.body.appendChild(script);
 
-        // Cleanup function to remove the script after component unmounts
-        return () => {
-            document.body.removeChild(script);
-        }
-    }, []);
+    //     // Cleanup function to remove the script after component unmounts
+    //     return () => {
+    //         document.body.removeChild(script);
+    //     }
+    // }, []);
 
     useEffect(() => {
         if (window.hbspt) {
@@ -53,8 +54,15 @@ export default function ContactForm(){
     }, []);
 
     return (
-        <div>
-            <div id="hubspot-form"></div>
-        </div>
+        <>
+    <div className="parent mt-[20%] relative">
+        <img src={decoration} alt="" className="absolute top-[-2%]" />
+      <div className="main_text bg-rose-200 p-[15%]"> 
+         <div id="hubspot-form" className="hubspot-form"></div>
+    </div>
+    </div>
+        
+
+        </>
     );
 }
