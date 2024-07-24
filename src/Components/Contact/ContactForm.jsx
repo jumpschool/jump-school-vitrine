@@ -5,7 +5,7 @@ export default function ContactForm() {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
-  const [phoneNumber, setPhoneNumber] = useState("");
+  const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
 
   const handleSubmit = async (e) => {
@@ -34,15 +34,18 @@ export default function ContactForm() {
         }
       );
 
-      if (response.status === 200) { 
+      if (response.status === 200) {
+        console.log(data()); 
         alert("Submission successful");
       } else {
+        console.log(data()); 
         const errorMessage = response.data && response.data.message
           ? response.data.message
           : "An unknown error occurred";
         alert(`Submission failed: ${errorMessage}`);
       }
     } catch (error) {
+        console.log(data()); 
       console.error("Error:", error);
       alert("Submission failed");
     }
@@ -50,7 +53,7 @@ export default function ContactForm() {
     setFirstName("");
     setLastName("");
     setEmail("");
-    setPhoneNumber("");
+    setPhone("");
     setMessage("");
   };
 
