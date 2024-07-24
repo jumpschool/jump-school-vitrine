@@ -46,10 +46,9 @@ export default function ContactForm() {
           : "An unknown error occurred";
         alert(`Submission failed: ${errorMessage}`);
       }
-    } catch(error) {
-      console.error("Error:", error);
-      console.log(error);
-      alert("Submission failed catched");
+    } catch(e){
+      console.error(e);
+      console.log('excpetion catched');
     }
 
     setFirstName("");
