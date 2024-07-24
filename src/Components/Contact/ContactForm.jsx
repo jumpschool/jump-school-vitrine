@@ -33,6 +33,7 @@ export default function ContactForm() {
           },
         }
       );
+      console.log(data());
 
       if (response.status === 200) {
         console.log(data()); 
@@ -44,9 +45,9 @@ export default function ContactForm() {
           : "An unknown error occurred";
         alert(`Submission failed: ${errorMessage}`);
       }
-    } catch (error) {
+    } catch(error) {
       console.error("Error:", error);
-      alert("Submission failed");
+      alert("Submission failed catched");
     }
 
     setFirstName("");
