@@ -1,4 +1,4 @@
-export default function Formation() {
+export default function SourceInfo() {
   return (
     <div className="flex-1 px-2">
       <div className="relative h-11 w-full min-w-[200px] mt-9">
