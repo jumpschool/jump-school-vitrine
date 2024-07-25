@@ -33,7 +33,7 @@ export default function Header(){
                         <Link to="/" className="hover:bg-rose-600 hover:shadow-md hover:text-white hover:px-[1%] hover:rounded-md rounded-md Text-navbar-element block text-xl xl:inline-block xl:mt-0 text-rose-600 font-semibold max-sxl:w-[100%] max-xl:border-b-2 max-xl:border-rose-100 max-xl:text-md max-sm:rounded-none" onClick={closeMenu}>
                             Admission
                         </Link>
-                        <Link to="/" className="hover:bg-rose-600 hover:shadow-md hover:text-white hover:px-[1%] hover:rounded-md rounded-md Text-navbar-element block  text-xl xl:inline-block xl:mt-0 text-rose-600 font-semibold max-xl:w-[100%] max-xl:border-b-2 max-xl:border-rose-100 max-xl:text-md max-sm:rounded-none" onClick={closeMenu}>
+                        <Link to="/formation" className="hover:bg-rose-600 hover:shadow-md hover:text-white hover:px-[1%] hover:rounded-md rounded-md Text-navbar-element block  text-xl xl:inline-block xl:mt-0 text-rose-600 font-semibold max-xl:w-[100%] max-xl:border-b-2 max-xl:border-rose-100 max-xl:text-md" onClick={closeMenu}>
                             Formations
                         </Link>
                         <Link to="/" className="hover:bg-rose-600 hover:shadow-md hover:text-white hover:px-[1%] hover:rounded-md rounded-md Text-navbar-element block text-xl xl:inline-block xl:mt-0 text-rose-600 font-semibold max-xl:w-[100%] max-xl:border-b-2 max-xl:border-rose-100 max-xl:text-md max-sm:rounded-none" onClick={closeMenu}>
@@ -57,9 +57,9 @@ export default function Header(){
                                                     </p>
                                                 </div>
                                                 <p className="my-[4%]">Ou envoyez-nous un message :</p>
-                                                <button className=" bg-rose-600 hover:bg-white hover:text-rose-600 hover:border-2 hover:border-rose-600   text-white font-bold px-[4%] py-[2%] rounded-md">
+                                                <Link className=" bg-rose-600 hover:bg-white hover:text-rose-600 hover:border-2 hover:border-rose-600   text-white font-bold px-[4%] py-[2%] rounded-md">
                                                     Nous contacter
-                                                </button>
+                                                </Link>
                                         </div>
                                     </button>
                                 </div>

@@ -23,14 +23,16 @@ export default function ContactForm() {
     };
 
     const apiKey = import.meta.env.VITE_Hubspot_API;
+    console.log(apiKey);
     if (!apiKey) {
       console.error("HubSpot API key is missing");
       return;
     }
 
     const hubspotClient = new Client({ accessToken: apiKey });
+    console.log(hubspotClient)
 
-    hubspotClient.setBasePath('/api');
+    // const x = hubspotClient.setBasePath('/api');
 
     try {
       const createContactResponse = await hubspotClient.crm.contacts.basicApi.create(data);
