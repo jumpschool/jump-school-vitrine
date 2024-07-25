@@ -1,10 +1,10 @@
 import React from 'react';
 import LogoJumpFooter from "../../assets/Logos/LogoJumpFooter";
 import imageFooter from "../../assets/images/Footer/imageFooter.png";
-import instagram from "../../assets/images/Footer/instagram.png";
 import youtube from "../../assets/images/Footer/youtube.png";
 import facebook from "../../assets/images/Footer/facebook.png";
 import linkedin from "../../assets/images/Footer/linkedin.png";
+import instagram1 from "../../assets/images/Footer/instagram1.png";
 
 export default function Footer() {
   return (
@@ -33,7 +33,7 @@ export default function Footer() {
                 </div>
                 <div className="footer-icons flex justify-center">
                   <div className="footer-image bg-white p-2 rounded-full">
-                    <img src={instagram} alt="Instagram" className="w-6" />
+                    <img src={instagram1} alt="Instagram" className="w-6" />
                   </div>
                 </div>
               </div>
