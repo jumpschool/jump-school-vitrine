@@ -30,8 +30,9 @@ export default function ContactForm() {
     }
 
     const hubspotClient = new Client({ accessToken: apiKey });
+    console.log(hubspotClient)
 
-    const x = hubspotClient.setBasePath('/api');
+    // const x = hubspotClient.setBasePath('/api');
 
     try {
       const createContactResponse = await hubspotClient.crm.contacts.basicApi.create(data);
