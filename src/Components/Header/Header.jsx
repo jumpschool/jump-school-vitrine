@@ -57,9 +57,9 @@ export default function Header(){
                                                     </p>
                                                 </div>
                                                 <p className="my-[4%]">Ou envoyez-nous un message :</p>
-                                                <button className=" bg-rose-600 hover:bg-white hover:text-rose-600 hover:border-2 hover:border-rose-600   text-white font-bold px-[4%] py-[2%] rounded-md">
+                                                <Link className=" bg-rose-600 hover:bg-white hover:text-rose-600 hover:border-2 hover:border-rose-600   text-white font-bold px-[4%] py-[2%] rounded-md">
                                                     Nous contacter
-                                                </button>
+                                                </Link>
                                         </div>
                                     </button>
                                 </div>
