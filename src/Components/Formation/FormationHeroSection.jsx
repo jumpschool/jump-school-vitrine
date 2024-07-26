@@ -90,7 +90,7 @@ export default function FormationHeroSection() {
         </div>
 
         <div className={`content ${transition ? 'fade-out' : 'fade-in'}`}>{/* for BackGround image */}
-          <div className="ContentHolder">
+          <div className="ContentHolder ">
             <div className="headerContent">
               <h1>{content[activeContent].title}</h1>
             </div>
