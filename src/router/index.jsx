@@ -3,6 +3,9 @@ import Home from '../Pages/Home'
 import NotFound from '../Pages/NotFound'
 import Layout from '../Layouts/Layout'
 import Contact from '../Pages/Contact'
+import Formation from "../Pages/Formation";
+
+
 export const router = createBrowserRouter([
     {
         element: <Layout/>,
@@ -19,8 +22,8 @@ export const router = createBrowserRouter([
                 element: <Contact/>
             }
             ,{
-                path:"/contact",
-                element: <Contact/>
+                path:"/formation",
+                element: <Formation/>
             }
         ]
 
