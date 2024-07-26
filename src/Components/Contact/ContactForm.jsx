@@ -20,18 +20,22 @@ export default function ContactForm() {
         { property: "message", value: message },
       ],
     };
+    console.log(data);
+    const apiKey= import.meta.env.VITE_Hubspot_API;
+    console.log(apiKey);
 
     try {
+        console.log('hey')
       const response = await axios.post('https://api.hubapi.com/contacts/v1/contact', data, {
         headers: {
-          'Authorization': `Bearer ${import.meta.env.VITE_Hubspot_API}`,
+          'Authorization': `Bearer ${apiKey}`,
           'Content-Type': 'application/json',
           'Access-Control-Allow-Origin': '*',
           mode: 'no-cors',
 
         }
       });
-      console.log(response.data);
+      console.log(response);
     } catch (error) {
       console.error(error);
     }
