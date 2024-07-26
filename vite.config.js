@@ -8,7 +8,7 @@ export default defineConfig({
     proxy: {
       '/api': {
         target: 'https://api.hubapi.com',
-        changeOrigin: true,
+        changeOrigin: false,
         rewrite: (path) => path.replace(/^\/api/, '')
       }
     },
