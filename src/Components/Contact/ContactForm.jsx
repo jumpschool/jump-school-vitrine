@@ -30,9 +30,7 @@ export default function ContactForm() {
         headers: {
           'Authorization': `Bearer ${apiKey}`,
           'Content-Type': 'application/json',
-          'Access-Control-Allow-Origin': '*',
-          mode: 'no-cors',
-
+          'Access-Control-Allow-Origin': 'https://api.hubapi.com/',
         }
       });
       console.log(response);
