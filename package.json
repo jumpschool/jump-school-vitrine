@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "proxy":"https://api.hubapi.com",
+  "proxy": "https://api.hubapi.com",
   "scripts": {
     "dev": "vite --host",
     "build": "vite build",
@@ -17,6 +17,7 @@
     "react-dom": "^18.3.1",
     "react-hot-toast": "^2.4.1",
     "react-router-dom": "^6.24.1",
+    "react-toastify": "^10.0.5",
     "styled-components": "^6.1.11"
   },
   "devDependencies": {
