@@ -235,15 +235,15 @@
 {
   .BottomHero .buttonFilter button
   {
-    width: 10rem;
+    width: 13rem;
   }
 
   .BottomHero
   {
-    width: 65%;
+    width: 85%;
   }
   .Hero-text {
-    width: 80%;
+    width: 60%;
   }
 
   .BottomHero .buttonFilter button {
@@ -256,7 +256,7 @@
 {
   .BottomHero .buttonFilter button
   {
-    width: 9rem;
+    width: 13rem;
   }
 }
 
@@ -275,7 +275,7 @@
 
   .Hero-text
   {
-    padding: 0 0 0 7rem;
+    padding: 0 0 0 5rem;
   }
 }
 
@@ -298,8 +298,47 @@
   {
     border-radius: 0;
   }
+
+
+  .FirstSection h3
+  {
+    font-size: 3rem;
+  }
 }
 
+
+
+
+@media (max-width:887px)
+{
+  .FomationContainer
+  {
+    margin-bottom: 0;
+  }
+
+  .BottomHero
+  {
+    margin-bottom: 50rem;
+  }
+
+  .FilteredContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .FilterLeft
+  {
+    display: none;
+  }
+  .FilterRight
+  {
+    width: 80%;
+  }
+
+
+
+}
 
 @media (max-width:657px)
 {
@@ -309,6 +348,15 @@
     width: 100%;
   }
   
+}
+
+
+@media (max-width:778px)
+{
+  .Hero-text
+  {
+    width: 80%;
+  }
 }
 
 
@@ -322,7 +370,7 @@
   
   .BottomHero .buttonFilter
   {
-    height: 100%;
+    height: 20rem;
     padding: 1rem 0;
   }
 
@@ -335,6 +383,33 @@
   {
     font-size: 3.4rem;
   }
+
+
+
+
+  .headerContent h1
+  {
+    font-size: 1.8rem;
+  }
+
+  .FormationContent h2
+  {
+    font-size: 1rem;
+  }
+  .FormationContent 
+  {
+    font-size: 0.8rem;
+  }
+
+}
+
+
+
+@media (max-width:414px)
+{
+  .BottomHero {
+    margin-bottom: 55rem;
+}
 }
 
 @media (max-width:375px)
@@ -342,5 +417,10 @@
   .FirstSection h3
   {
     font-size: 2.5rem;
+  }
+
+  .BottomHero
+  {
+    margin-bottom: 56rem;
   }
 }
