@@ -90,22 +90,22 @@ export default function FormationHeroSection() {
         </div>
 
         <div className={`content ${transition ? 'fade-out' : 'fade-in'}`}>{/* for BackGround image */}
-          <div className="ContentHolder bg-green-300">
+          <div className="ContentHolder">
             <div className="headerContent">
-              <h1>{content[activeContent].title}</h1>
+              <h1 className="!text-bold">{content[activeContent].title}</h1>
             </div>
-            <div className="FilteredContent">
+            <div className="FilteredContent ">
               <div className="FilterLeft">
                 <img src={content[activeContent].image} alt={content[activeContent].title} />
               </div>
-              <div className="FilterRight">
-                <div className="FormationContent">
-                  <h2>{content[activeContent].description}</h2>
-                  <p className="text-center mt-5 leading-6">{content[activeContent].details}</p>
+              <div className="FilterRight flex flex-col items-center  max-sm:w-[90%]">
+                <div className="FormationContent  w-[90%]  max-sm:w-[100%]">
+                  <h2 className="font-bold text-xl leading-none text-center max-sm:text-lg">{content[activeContent].description}</h2>
+                  <p className="text-center font-medium mt-5 leading-none max-sm:text-md max-sm:leading-relaxed">{content[activeContent].details}</p>
                 </div>
                 <div className="timing mt-16  mx-auto flex items-center justify-center flex-col gap-8">
                   <img src={Timing} alt="Timing" />
-                <button className="moreInfo m-auto p-2">Plus de Details</button>
+                <button className="moreInfo  py-[2%] px-[5%] text-lg max-sm:text-md bg-rose-600 text-white rounded-lg hover:bg-white border-2 border-rose-600  hover:border-rose-600 hover:text-rose-600">Plus de Details</button>
                 </div>
               </div>
             </div>
