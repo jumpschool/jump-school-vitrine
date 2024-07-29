@@ -12,25 +12,17 @@ export default function ContactForm() {
     e.preventDefault();
 
     const data = {
-      properties: [
-        { property: "firstname", value: firstName },
-        { property: "lastname", value: lastName },
-        { property: "email", value: email },
-        { property: "phone", value: phoneNumber },
-        { property: "message", value: message },
-      ],
+      firstName,
+      lastName,
+      email,
+      phoneNumber,
+      message,
     };
-    console.log(data);
-    const apiKey= import.meta.env.VITE_Hubspot_API;
-    console.log(apiKey);
 
     try {
-        console.log('hey')
-      const response = await axios.post('https://api.hubapi.com/contacts/v1/contact', data, {
+      const response = await axios.post('https://hook.eu2.make.com/yhja7t6uq6nwyz9fa7wfqykukfi1v92z', data, {
         headers: {
-          'Authorization': `Bearer ${apiKey}`,
           'Content-Type': 'application/json',
-          'Access-Control-Allow-Origin': 'https://api.hubapi.com',
         }
       });
       console.log(response);
