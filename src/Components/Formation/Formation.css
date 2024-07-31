@@ -1,0 +1,426 @@
+.FomationContainer {
+  position: relative;
+  height: 90vh;
+  overflow: hidden;
+  margin-bottom: 40rem;
+}
+
+.FomationContainer::after
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  background: rgb(222,36,92);
+  background: linear-gradient(65deg, rgb(255 0 77) 26%, rgba(255, 255, 255, 0) 59%);
+  width: 100%;
+  height: 100%;
+}
+
+
+.sliderBackground {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(100% * 5); 
+  height: 100%;
+  animation: slide 20s ease-in-out infinite;
+}
+
+.sliderBackground img {
+  width: 20%; 
+  height: 100%;
+  object-fit: cover;
+}
+
+@keyframes slide {
+  0% { transform: translateX(0); }
+  16.67% { transform: translateX(0); } 
+  33.33% { transform: translateX(-20%); }
+  50% { transform: translateX(-20%); } 
+  66.67% { transform: translateX(-40%); }
+  83.33% { transform: translateX(-40%); } 
+  100% { transform: translateX(-60%); } 
+}
+
+
+.FilterLeft {
+  width: 70rem;
+  height: 25rem;
+}
+
+
+.moreInfo
+{
+  background-color: #DE245C !important;
+  color: white;
+  border-radius: 1rem;
+  font-size: 1.2rem;
+  padding:0 2rem;
+  width: 11rem;
+}
+
+
+.FormationContent h2 {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+   
+@media (max-width:2000px)
+{
+
+  .Hero-text {
+    width: 50%;
+    height: 86%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    color: white;
+    text-align: center;
+    z-index: 10;
+    text-align: start;
+    padding: 20px;
+    border-radius: 10px;
+    position: sticky;
+    padding: 0 0 0 9rem;
+  }
+
+  .FirstSection h3{
+    font-size: 4rem;
+    line-height: 2;
+    font-weight: 500;
+  }
+
+  .FirstSection h3 span
+  {
+    border: 7px solid rgb(255, 255, 255);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  }
+
+  .FirstSection p
+  {
+    letter-spacing: 2px;
+    line-height: 25px;
+  }
+
+  .BottomHero {
+    margin: auto;
+    width: 70%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 3%;
+    height: 2rem;
+  }
+
+
+  .BottomHero .buttonFilter
+  {
+      background-color: #071323;
+      color: white;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 7rem;
+      border-radius: .9rem;
+  }
+
+
+  .BottomHero .buttonFilter button
+  {
+    width: 14rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+
+  }
+
+  .BottomHero .buttonFilter .Active
+  {
+    background-color: #DE245C;
+    border-radius: 10px;
+    height: 70px;
+  }
+
+  
+  .FilterRight, .FilterLeft {
+    width: 50%;
+  }
+  
+}
+
+
+.content {
+  transition: opacity 0.3s ease-in-out;
+  opacity: 1;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+.fade-in {
+  opacity: 1;
+}
+
+.FomationContainer {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.sliderBackground {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(100% * 5); /* 4 images + 1 duplicate = 5 images */
+  height: 100%;
+  animation: slide 20s ease-in-out infinite;
+}
+
+.sliderBackground img {
+  width: 20%; /* Each image takes 20% of the container width (5 images total) */
+  height: 100%;
+  object-fit: cover;
+}
+
+@keyframes slide {
+  0% { transform: translateX(0); }
+  16.67% { transform: translateX(0); } /* Pausef at the first image */
+  33.33% { transform: translateX(-20%); }
+  50% { transform: translateX(-20%); } /* Pause at the second image */
+  66.67% { transform: translateX(-40%); }
+  83.33% { transform: translateX(-40%); } /* Pause at the third image */
+  100% { transform: translateX(-60%); } /* Pause at the fourth image */
+}
+
+
+.headerContent
+{
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.headerContent h1
+{
+  font-size: 3rem;
+  font-weight: 600;
+  color: #DE245C;
+}
+.FilteredContent {
+  display: flex;
+}
+
+
+@media (max-width:1645px)
+{
+  .BottomHero .buttonFilter button
+  {
+    font-size: 1.2rem;
+  }
+
+  .BottomHero .buttonFilter button
+  {
+    width: 11rem;
+  }
+}
+
+
+@media (max-width:1283px)
+{
+  .BottomHero .buttonFilter button
+  {
+    width: 13rem;
+  }
+
+  .BottomHero
+  {
+    width: 85%;
+  }
+  .Hero-text {
+    width: 60%;
+  }
+
+  .BottomHero .buttonFilter button {
+    font-size: 1rem;
+  }
+}
+
+
+@media (max-width:1280px)
+{
+  .BottomHero .buttonFilter button
+  {
+    width: 13rem;
+  }
+}
+
+
+@media (max-width:1063px)
+{
+  .BottomHero .buttonFilter button
+  {
+    width: 8rem;
+  }
+
+  .BottomHero .buttonFilter button
+  {
+    font-size: 0.9rem;
+  }
+
+  .Hero-text
+  {
+    padding: 0 0 0 5rem;
+  }
+}
+
+
+
+@media (max-width:900px)
+{
+  .BottomHero .buttonFilter button
+  {
+    font-size: 0.8rem;
+    width: 7rem;
+  }
+
+  .BottomHero
+  {
+    position: relative;
+    width: 100%;
+  }
+  .BottomHero .buttonFilter
+  {
+    border-radius: 0;
+  }
+
+
+  .FirstSection h3
+  {
+    font-size: 3rem;
+  }
+}
+
+
+
+
+@media (max-width:887px)
+{
+  .FomationContainer
+  {
+    margin-bottom: 0;
+  }
+
+  .BottomHero
+  {
+    margin-bottom: 50rem;
+  }
+
+  .FilteredContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .FilterLeft
+  {
+    display: none;
+  }
+  .FilterRight
+  {
+    width: 80%;
+  }
+
+
+
+}
+
+@media (max-width:657px)
+{
+  .Hero-text
+  {
+    padding: 0 0 0 1rem;
+    width: 100%;
+  }
+  
+}
+
+
+@media (max-width:778px)
+{
+  .Hero-text
+  {
+    width: 80%;
+  }
+}
+
+
+@media (max-width:548px)
+{
+  .BottomHero .buttonFilter
+  {
+    flex-direction: column ;
+    gap: 2rem;
+  }
+  
+  .BottomHero .buttonFilter
+  {
+    height: 20rem;
+    padding: 1rem 0;
+  }
+
+  .FirstSection p
+  {
+    font-size: .9rem;
+  }
+
+  .FirstSection h3
+  {
+    font-size: 3.4rem;
+  }
+
+
+
+
+  .headerContent h1
+  {
+    font-size: 1.8rem;
+  }
+
+  .FormationContent h2
+  {
+    font-size: 1rem;
+  }
+  .FormationContent 
+  {
+    font-size: 0.8rem;
+  }
+
+}
+
+
+
+@media (max-width:414px)
+{
+  .BottomHero {
+    margin-bottom: 55rem;
+}
+}
+
+@media (max-width:375px)
+{
+  .FirstSection h3
+  {
+    font-size: 2.5rem;
+  }
+
+  .BottomHero
+  {
+    margin-bottom: 56rem;
+  }
+}

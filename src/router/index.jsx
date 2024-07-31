@@ -4,6 +4,9 @@ import NotFound from '../Pages/NotFound'
 import Layout from '../Layouts/Layout'
 import Contact from '../Pages/Contact'
 import Admission from '../Pages/Admission'
+import Formation from "../Pages/Formation";
+
+
 export const router = createBrowserRouter([
     {
         element: <Layout/>,
@@ -25,8 +28,8 @@ export const router = createBrowserRouter([
                 element: <Admission/>
             }
             ,{
-                path:"/contact",
-                element: <Contact/>
+                path:"/formation",
+                element: <Formation/>
             }
         ]
 

@@ -84,6 +84,7 @@ function Cartes() {
         </div>
 
       </div>
+      
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 w-3/4 sm:w-9/10 lg:w-custom-width mx-auto max-2xl:flex flex-wrap justify-center items-center pt-10">
 
   {/* Card 4 */}
