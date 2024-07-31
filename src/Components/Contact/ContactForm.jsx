@@ -16,6 +16,24 @@ export default function ContactForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (!firstName || !lastName || !email || !phoneNumber || !message) {
+      toast.error("Tous les champs sont obligatoires.");
+      return;
+    }
+
+    const phoneNumberRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
+    if(!phoneNumberRegex.test(phoneNumber)){
+      toast.error("Veuillez fournir un numéro de télèphone valid.");
+      return;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      toast.error("Veuillez fournir une adresse e-mail valide.");
+      return;
+    }
+
     if (!isChecked1) {
       toast.error("Veuillez accepter les champs obligatoires pour continuer.");
       return;
