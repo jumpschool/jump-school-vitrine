@@ -5,10 +5,12 @@ function SendMessage() {
         document.getElementById("ImportantCheck").required = true;
     }
     return (
-        <button onclick={{checkBox}}
-            className="envoyer absolute  right-0 w-fit px-6 py-3 mt-4 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform rounded-md border border-black hover:bg-rose-600 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50">
+        <div className='flex h-[10vh] items-end'>
+        <button type="submit" onclick={{checkBox}}
+            className="text-semibold  bg-rose-600 px-[3%] py-[1%] rounded-md border-2 border-rose-600 hover:bg-white hover:text-rose-600  ">
             Envoyer
         </button>
+        </div>
     );
 }
 

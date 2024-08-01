@@ -51,22 +51,10 @@
 }
 
 
-.moreInfo
-{
-  background-color: #DE245C !important;
-  color: white;
-  border-radius: 1rem;
-  font-size: 1.2rem;
-  padding:0 2rem;
-  width: 11rem;
-}
 
 
-.FormationContent h2 {
-  text-align: center;
-  font-size: 1.3rem;
-  font-weight: 500;
-}
+
+
    
 @media (max-width:2000px)
 {
@@ -392,10 +380,7 @@
     font-size: 1.8rem;
   }
 
-  .FormationContent h2
-  {
-    font-size: 1rem;
-  }
+ 
   .FormationContent 
   {
     font-size: 0.8rem;
