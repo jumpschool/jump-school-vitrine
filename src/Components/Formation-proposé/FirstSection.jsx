@@ -6,7 +6,7 @@ import './firstSection.css';
 export default function FirstSection() {
   return (
     <>
-      <div className=" ">
+      <div className="section-container ">
       <div className="title-container px-4 sm:px-8 lg:px-16 ">
      <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-customPink mb-4 py-12">
     Des Formations en Alternance <br />

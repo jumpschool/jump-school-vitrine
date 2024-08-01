@@ -31,5 +31,6 @@ button.text-customPink.text-button.flex.flex-col.items-center.justify-center.tex
   height: 70%;
 }
 
-
-
+.title-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
