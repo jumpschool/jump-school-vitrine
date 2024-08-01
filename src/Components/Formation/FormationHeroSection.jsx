@@ -4,10 +4,11 @@ import Image2 from "../../assets/Backgrounds/html_design.png";
 import Image3 from "../../assets/Backgrounds/marketing_design.png";
 import Image4 from "../../assets/Backgrounds/ui_design.png";
 import "./Formation.css";
-import ImageTest1 from "../../assets/images/Formation1.png";
-import ImageTest2 from "../../assets/images/Formation2.png";
-import ImageTest3 from "../../assets/images/Formation3.png";
-import ImageTest4 from "../../assets/images/Formation4.png";
+import ImageTest1 from "../../assets/images/Formation/Formation1.png";
+import ImageTest2 from "../../assets/images/Formation/Formation2.png";
+import ImageTest3 from "../../assets/images/Formation/Formation3.png";
+import ImageTest4 from "../../assets/images/Formation/Formation4.png";
+import ImageTest5 from "../../assets/images/Formation/Recrutement.png";
 import Timing from "../../assets/images/timing.png";
 
 export default function FormationHeroSection() {
@@ -32,7 +33,7 @@ export default function FormationHeroSection() {
       image: ImageTest3,
       description: 'Une formation certifiante en partenariat avec des entreprises et des experts internationaux pour vous offrir la meilleure formation en UX/UI design en France.',
       details: 'Cette formation vous permettra d\'apprendre à analyser les users, concevoir et designer des interface dans le but d\'améliorer l\'expérience utilisateur de vos produits digitaux.',
-    },
+    }, 
     'Secretariat': {
       title: 'Secretariat',
       image: ImageTest4,
@@ -41,9 +42,9 @@ export default function FormationHeroSection() {
     },
     'Recrutement': {
       title: 'Tech recruitement specialist',
-      image: ImageTest1,
-      description: 'Une formation certifiante en partenariat avec des entreprises et des experts internationaux pour vous offrir la meilleure formation en UX/UI design en France.',
-      details: 'Cette formation vous permettra d\'apprendre à analyser les users, concevoir et designer des interface dans le but d\'améliorer l\'expérience utilisateur de vos produits digitaux.',
+      image: ImageTest5,
+      description: 'Une formation certifiante en partenariat avec des  entreprises et des experts internationaux pour vous offrir la meilleure formation en UX/UI design en France.',
+      details: 'Cette formation vous permettra d\'appren dre à analyser les users, concevoir et designer des interface dans le but d\'améliorer l\'expérience utilisateur de vos produits digitaux.',
     },
   };
 
@@ -53,7 +54,7 @@ export default function FormationHeroSection() {
       setTimeout(() => {
         setActiveContent(newContent);
         setTransition(false);
-      }, 300); // Match the duration of the CSS transition
+      }, 300); 
     }
   };
 
