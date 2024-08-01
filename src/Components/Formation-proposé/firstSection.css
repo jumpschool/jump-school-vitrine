@@ -16,21 +16,28 @@
 }
 .section-container {
   position: relative;
-  padding-bottom: 200px; 
+  padding-bottom: 100px; 
 }
 
 .section-container::after {
   content: '';
   background-image: url('../../assets/images/Formation-proposé/bgdown.png');
-  background-size: cover;  
+  /* background-size: cover;   */
+  background-repeat: no-repeat;
   background-position: bottom center;
   position: absolute; 
   top:63%;
   left: 0;
   width: 98.7vw;
-  height:59vh;
+  height:75vh;
   z-index: -1;
 }
 
+
+@media only screen and (max-width: 1140px) {
+  .section-container::after {
+    height:100vh;
+  }
+}
 
 
