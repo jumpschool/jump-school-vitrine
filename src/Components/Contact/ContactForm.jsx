@@ -25,8 +25,9 @@ export default function ContactForm() {
       return;
     }
 
-    const phoneNumberRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
-    if(!phoneNumberRegex.test(phoneNumber)){
+    const phoneNumberRegex =
+      /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
+    if (!phoneNumberRegex.test(phoneNumber)) {
       toast.error("Veuillez fournir un numéro de télèphone valid.");
       return;
     }
@@ -51,11 +52,15 @@ export default function ContactForm() {
     };
 
     try {
-      const response = await axios.post('https://hook.eu2.make.com/yhja7t6uq6nwyz9fa7wfqykukfi1v92z', data, {
-        headers: {
-          'Content-Type': 'application/json',
+      const response = await axios.post(
+        "https://hook.eu2.make.com/jenfbbi4i8oo7quutrc6p32mw6xwpww1",
+        data,
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
         }
-      });
+      );
       console.log(response);
       toast.success("Votre message a été envoyé avec succès !");
     } catch (error) {
@@ -74,18 +79,27 @@ export default function ContactForm() {
 
   return (
     <>
-     <img src={decoration} alt="" className="absolute top-[75%] z-0 max-sm:hidden sm:max-xl:hidden" />
+      <img
+        src={decoration}
+        alt=""
+        className="absolute top-[75%] z-0 max-sm:hidden sm:max-xl:hidden"
+      />
       <div className="bg-rose-200 ">
         <div className="pt-[6%] max-sm:pt-[20%] max-sm:px-[3%] sm:max-xl:pt-[10%]">
           <div className="second-contact-background-text flex justify-center ">
-            <h2 className="text-black font-bold text-4xl max-sm:text-center">Envoyez-nous<span className="text-rose-600"> un message !</span></h2>
+            <h2 className="text-black font-bold text-4xl max-sm:text-center">
+              Envoyez-nous<span className="text-rose-600"> un message !</span>
+            </h2>
           </div>
         </div>
         <div className="min-h-screen .bg-slate-900 text-amber-50 overflow-x-hidden h-full w-[98vw] flex !justify-center m-auto">
           <div className="container px-6 py-10 mx-auto sm:max-xl:!pb-0 ">
             <div className="lg:flex lg:items-center lg:-mx-10 justify-center">
               <div className="lg:w-1/2 lg:mx-10">
-                <form onSubmit={handleSubmit} className={'relative mb-[10%] mt-6 max-sm:mt-6'}>
+                <form
+                  onSubmit={handleSubmit}
+                  className={"relative mb-[10%] mt-6 max-sm:mt-6"}
+                >
                   <div className="-mx-2 md:items-center md:flex">
                     <div className="flex-1 px-2">
                       <div className="relative h-11 w-full min-w-[200px]">

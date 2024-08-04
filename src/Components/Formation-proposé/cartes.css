@@ -1,7 +1,8 @@
 .bg-carde {
-  background-image: url('../../assets/images/carteBg.png'); 
+  background-image: url('../../assets/images/Formation-proposé/carteBg.png'); 
   background-size: cover;
   background-position: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); 
 }
 
 .card-overlay {
@@ -11,7 +12,6 @@
   border-radius: 1.5rem; 
 }
 
-
 .bottom_card.z-20 {
   background: white;
   transform: rotate(357deg);
@@ -19,16 +19,18 @@
   position: absolute;
   bottom: -1rem;
   width: 100%;
-  box-shadow: -1px -3px 5px 0px rgba(189,189,189,0.75);
--webkit-box-shadow: -1px -3px 5px 0px rgba(189,189,189,0.75);
--moz-box-shadow: -1px -3px 5px 0px rgba(189,189,189,0.75);
+  box-shadow: -1px -3px 5px 0px rgba(189, 189, 189, 0.75);
+  -webkit-box-shadow: -1px -3px 5px 0px rgba(189, 189, 189, 0.75);
+  -moz-box-shadow: -1px -3px 5px 0px rgba(189, 189, 189, 0.75);
 }
-
 
 button.text-customPink.text-button.flex.flex-col.items-center.justify-center.text-xl.font-bold {
   transform: rotate(3deg);
   text-align: center;
   margin: auto;
-  /* vertical-align: middle; */
   height: 70%;
+}
+
+.title-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }

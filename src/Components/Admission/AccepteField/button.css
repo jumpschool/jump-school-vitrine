@@ -1,0 +1,7 @@
+.button-bg {
+  background-image: url("../../../assets/images/Admission/Frame333.png");
+  background-size: cover;
+  background-position: center; 
+  height: 80px; 
+  /* background-color: blueviolet; */
+}
