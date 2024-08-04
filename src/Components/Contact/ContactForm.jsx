@@ -5,6 +5,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import PrivacyPolicy from "../Contact/Contactfield/PrivacyPolicy"
 import SendMessage from "../Contact/Contactfield/SendMessage"
 import decoration from "../../assets/images/decoration.png"
+import './Herosection.css'
 
 export default function ContactForm() {
   const [firstName, setFirstName] = useState("");
@@ -13,6 +14,8 @@ export default function ContactForm() {
   const [phoneNumber, setPhoneNumber] = useState("");
   const [message, setMessage] = useState("");
   const [isChecked1, setChecked1] = useState(false);
+  const [isChecked, setChecked] = useState(false);
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -65,6 +68,8 @@ export default function ContactForm() {
     setEmail("");
     setPhoneNumber("");
     setMessage("");
+    setChecked("");
+    setChecked1("")
   };
 
   return (
@@ -85,9 +90,9 @@ export default function ContactForm() {
                     <div className="flex-1 px-2">
                       <div className="relative h-11 w-full min-w-[200px]">
                         <input name="firstname" value={firstName} onChange={(e) => setFirstName(e.target.value)}
-                          className="peer h-full w-full border-b border-black bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border-blue-gray-200 focus:border-gray-500 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50 placeholder:opacity-0 focus:placeholder:opacity-100" />
+                          className="peer h-full w-full border-b border-black bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-black outline outline-0 transition-all placeholder-shown:border-blue-gray-200 focus:border-gray-500 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50 placeholder:opacity-0 focus:placeholder:opacity-100" />
                         <label
-                          className="text-sm font-medium absolute left-0 -top-1.5 flex h-full w-full select-none !overflow-visible truncate leading-tight text-black transition-all after:absolute after:-bottom-1.5 after:block after:w-full after:scale-x-0 after:border-b-2 after:border-gray-500 after:transition-transform after:duration-300 peer-placeholder-shown:text-xs peer-placeholder-shown:leading-[4.25] peer-placeholder-shown:text-blue-gray-500 peer-focus:text-base peer-focus:leading-tight peer-focus:text-gray-900 peer-focus:after:scale-x-100 peer-focus:after:border-gray-900 peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500">
+                          className="text-sm font-medium after:content[''] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none text-black !overflow-visible truncate leading-tight transition-all after:absolute after:-bottom-1.5 after:block after:w-full after:scale-x-0 after:border-b-2 after:border-gray-500 after:transition-transform after:duration-300 peer-placeholder-shown:text-base peer-placeholder-shown:leading-[4.25] peer-placeholder-shown:text-blue-gray-500 peer-focus:text-base peer-focus:leading-tight peer-focus:text-gray-900 peer-focus:after:scale-x-100 peer-focus:after:border-gray-900 peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500">
                           Nom <span className={'text-rose-600 ml-1'}>*</span>
                         </label>
                       </div>
@@ -95,7 +100,7 @@ export default function ContactForm() {
                     <div className="flex-1 px-2 mt-4 md:mt-0">
                       <div className="relative h-11 w-full min-w-[200px]">
                         <input name="lastname" value={lastName} onChange={(e) => setLastName(e.target.value)} type={"text"}
-                          className="peer h-full w-full border-b border-black bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border-blue-gray-200 focus:border-gray-500 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50 placeholder:opacity-0 focus:placeholder:opacity-100" />
+                          className="peer h-full w-full border-b border-black bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-black outline outline-0 transition-all placeholder-shown:border-blue-gray-200 focus:border-gray-500 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50 placeholder:opacity-0 focus:placeholder:opacity-100" />
                         <label
                           className="text-sm font-medium after:content[''] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none text-black !overflow-visible truncate leading-tight transition-all after:absolute after:-bottom-1.5 after:block after:w-full after:scale-x-0 after:border-b-2 after:border-gray-500 after:transition-transform after:duration-300 peer-placeholder-shown:text-base peer-placeholder-shown:leading-[4.25] peer-placeholder-shown:text-blue-gray-500 peer-focus:text-base peer-focus:leading-tight peer-focus:text-gray-900 peer-focus:after:scale-x-100 peer-focus:after:border-gray-900 peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500">
                           Prénom <span className={'text-rose-600  ml-1'}>*</span>
@@ -106,8 +111,8 @@ export default function ContactForm() {
                   <div className="-mx-2 md:items-center md:flex">
                     <div className="flex-1 px-2">
                       <div className="relative h-11 w-full min-w-[200px] mt-9">
-                        <input type="number" name="phoneNumber" value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)}
-                          className="peer h-full w-full border-b border-black bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border-blue-gray-200 focus:border-gray-500 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50 placeholder:opacity-0 focus:placeholder:opacity-100" />
+                        <input type="tel" name="phoneNumber" value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)}
+                          className="peer h-full w-full border-b border-black bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-black outline outline-0 transition-all placeholder-shown:border-blue-gray-200 focus:border-gray-500 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50 placeholder:opacity-0 focus:placeholder:opacity-100" />
                         <label
                           className="text-sm font-medium pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none !overflow-visible truncate leading-tight text-black transition-all after:absolute after:-bottom-1.5 after:block after:w-full after:scale-x-0 after:border-b-2 after:border-gray-500 after:transition-transform after:duration-300 peer-placeholder-shown:text-base peer-placeholder-shown:leading-[4.25] peer-placeholder-shown:text-blue-gray-500 peer-focus:text-base peer-focus:leading-tight peer-focus:text-gray-900 peer-focus:after:scale-x-100 peer-focus:after:border-gray-900 peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500">
                           Téléphone <span className={'text-rose-600  ml-1'}>*</span>
@@ -117,7 +122,7 @@ export default function ContactForm() {
                     <div className="flex-1 px-2 mt-4 md:mt-0">
                       <div className="relative h-11 w-full min-w-[200px] mt-9">
                         <input type={"email"} name="email" value={email} onChange={(e) => setEmail(e.target.value)}
-                          className="peer h-full w-full border-b border-black bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal outline outline-0 transition-all placeholder-shown:border-blue-gray-200  disabled:border-0  placeholder:opacity-0 focus:placeholder:opacity-100" />
+                          className="peer h-full w-full border-b border-black bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-black outline outline-0 transition-all placeholder-shown:border-blue-gray-200 focus:border-gray-500 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50 placeholder:opacity-0 focus:placeholder:opacity-100" />
                         <label
                           className="text-sm font-medium after:content[''] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none !overflow-visible truncate text-[11px] leading-tight text-black transition-all after:absolute after:-bottom-1.5 after:block after:w-full after:scale-x-0 after:border-b-2 after:border-gray-500 after:transition-transform after:duration-300 peer-placeholder-shown:text-base peer-placeholder-shown:leading-[4.25] peer-placeholder-shown:text-blue-gray-500 peer-focus:text-base peer-focus:leading-tight peer-focus:text-gray-900 peer-focus:after:scale-x-100 peer-focus:after:border-gray-900 peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500">
                           Email <span className={'text-rose-600  ml-1'}>*</span>
@@ -130,12 +135,10 @@ export default function ContactForm() {
                       Message <span className={"text-rose-600  ml-1"}>*</span>
                     </label>
                     <textarea name="message" value={message} onChange={(e) => setMessage(e.target.value)}
-                      className="mt-4 textarea block w-full px-5 py-3 bg-slate-900 bg-opacity-0 border-2 rounded border-black text-white dark:border-gray-700 outline-none"
+                      className="mt-4 textarea block w-full px-5 py-3 bg-slate-900 bg-opacity-0 border-2 rounded border-black text-black dark:border-gray-700 outline-none"
                     ></textarea>
                   </div>
-                  <PrivacyPolicy
-                    isChecked1={isChecked1}
-                    setChecked1={setChecked1}
+                  <PrivacyPolicy isChecked={isChecked} setChecked={setChecked} isChecked1={isChecked1} setChecked1={setChecked1}
                   />
                   <SendMessage />
                 </form>

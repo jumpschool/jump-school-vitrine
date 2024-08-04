@@ -1,10 +1,8 @@
-import {useState } from "react";
-
+import React from "react";
 import checkbox from "../../../assets/Icons/checkboxJ.png";
 import CheckedCheckbox from "../../../assets/Icons/checkedbox.png";
 
-export default function PrivacyPolicy({ isChecked1, setChecked1 }) {
-    const [isChecked, setChecked] = useState(false);
+export default function PrivacyPolicy({ isChecked1, setChecked1, isChecked, setChecked }) {
 
     const checkingBox = () => {
         setChecked(!isChecked);
@@ -25,18 +23,20 @@ export default function PrivacyPolicy({ isChecked1, setChecked1 }) {
 
                 <div className="checkbox_policy mb-5 ms-4 flex gap-2 flex-col">
                     <div className="flex items-start">
-                        <a onClick={checkingBox} id="link-checkbox" type="checkbox">
+                        <input id="link-checkbox1" name="isChecked" type="checkbox" className="hidden" checked={isChecked} onChange={checkingBox}/>
+                        <a onClick={checkingBox} id="link-checkbox1-toggle" type="checkbox">
                             {isChecked ? <img src={CheckedCheckbox} alt="" /> : <img src={checkbox} alt="" />}
                         </a>
-                        <label htmlFor="link-checkbox" className="ms-2 text-sm text-black ">
+                        <label htmlFor="link-checkbox1" className="ms-2 text-sm text-black">
                             J'accepte de recevoir d'autres communications de O'clock.
                         </label>
                     </div>
                     <div className="flex items-start required">
-                        <a onClick={checkingBox1} id="link-checkbox" type="checkbox">
+                        <input id="link-checkbox2" name="isChecked1" type="checkbox" className="hidden" checked={isChecked1} onChange={checkingBox1}/>
+                        <a onClick={checkingBox1} id="link-checkbox2-toggle" type="checkbox">
                             {isChecked1 ? <img src={CheckedCheckbox} alt="" /> : <img src={checkbox} alt="" />}
                         </a>
-                        <label htmlFor="link-checkbox" className="ms-2 text-sm text-black  required">
+                        <label htmlFor="link-checkbox2" className="ms-2 text-sm text-black required">
                             J'accepte d'être contacté par un conseiller pour recevoir une réponse.*
                         </label>
                     </div>
