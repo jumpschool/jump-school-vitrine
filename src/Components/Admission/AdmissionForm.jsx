@@ -9,22 +9,21 @@ import CurrentStatus from "./AdmissionField/CurrentStatus"
 
 export default function AdmissionForm() {
   return (
-    <div className="px-48 pb-4">
-      <div className="flex">
-      <Nom/>
-      <Prénom/>
+    <div className="px-4 sm:px-8 md:px-16 lg:px-24 xl:px-48 pb-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <Nom />
+        <Prénom />
       </div>
-      <div className="flex">
-      <Région/>
-      <Téléphone/>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <Région />
+        <Téléphone />
       </div>
-
-      <Email/>
-      <SourceInfo/>
-      <CommentConnus/>
-      <CurrentStatus/>
-
+      <div className="grid grid-cols-1 gap-4">
+        <Email />
+        <SourceInfo />
+        <CommentConnus />
+        <CurrentStatus /> 
+      </div>
     </div>
-  )
+  );
 }
-
